@@ -1,5 +1,4 @@
 
-
 <?php 
 error_reporting(0);
 
@@ -14,8 +13,8 @@ error_reporting(0);
 		$id = $_GET['print'];
         $update = true;
         // personal info
-		//$record = mysqli_query($db, "SELECT * FROM tbl_p_info  WHERE employee_id=\"$id\"");
-        $record = mysqli_query($db,"SELECT * FROM `tbl_p_info` Where `tbl_p_info`.`employee_id` = '\"$id\"'");
+		//$record = mysqli_query($db, "SELECT * FROM tbl_p_info  WHERE employee_id=$id");
+        $record = mysqli_query($db,"SELECT * FROM `tbl_p_info` Where `tbl_p_info`.`employee_id` = \"$id\"");
 
 		if (count($record) == 1 ) {
 			$n = mysqli_fetch_array($record);
@@ -238,7 +237,7 @@ error_reporting(0);
         }
 
          // family children 9
-        $record13 = mysqli_query($db, "SELECT * FROM tbl_children WHERE employee_id=\"$id\" LIMIT 9,1");
+        $record13 = mysqli_query($db, "SELECT * FROM tbl_children WHERE employee_id=\"id\"LIMIT 9,1");
 
 		if (count($record13) == 1 ) {
 			$fc = mysqli_fetch_array($record13);
@@ -337,7 +336,7 @@ error_reporting(0);
         }
 
         // MEMBERSHIP IN ASSOCIATION/ORGANIZATION  2
-        $record25 = mysqli_query($db, "SELECT * FROM tbl_membership WHERE employee_id=\"$id\" LIMIT 1,1");
+        $record25 = mysqli_query($db, "SELECT * FROM tbl_membership WHERE employee_id=\"$i\" LIMIT 1,1");
 
 		if (count($record25) == 1 ) {
 			$ma = mysqli_fetch_array($record25);
@@ -489,6 +488,7 @@ error_reporting(0);
 	}
 ?>
 
+
 <style type="text/css">
 table#t01{
 width: 950px;
@@ -569,331 +569,258 @@ padding: 2px;
 </head>
 <body>
 
-
 <table id="t01" class="centerTable">
+					
+					
 					<tr>
-                        <td colspan="12" class="text-white separator cat-head">VI. VOLUNTARY WORK OR INVOLVEMENT IN CIVIC /
-                            NON-GOVERNMENT / PEOPLE / VOLUNTARY ORGANIZATION/S</td>
+                        <td colspan="12" class="text-white separator cat-head">IV. CIVIL SERVICE ELIGIBILITY</td>
                     </tr>
-					<tr class="text-center">
-                        <td colspan="6" rowspan="2" class="s-label border-bottom-0 left-head">
-                            <span class="count float-left">29.</span> NAME & ADDRESS OF ORGANIZATION<br>
-                            (Write in full)
+                    <tr class="text-center">
+                        <td colspan="5" rowspan="2" class="s-label border-bottom-0 left-head" style="width:30%">
+                            <span class="count float-left">27.</span>
+                            CAREER SERVICE/ RA 1080 (BOARD/ BAR) UNDER SPECIAL LAWS/ CES/ CSEE
+                            BARANGAY ELIGIBILITY / DRIVER'S LICENSE
                         </td>
-                        <td colspan="2" class="s-label border-bottom-0 left-head">INCLUSIVE DATES</td>
-                        <td colspan="1" class="s-label border-bottom-0 left-head" rowspan="2">NUMBER OF HOURS</td>
-                        <td colspan="3" class="s-label border-bottom-0 left-head" rowspan="2">POSITION / NATURE OF WORK</td>
+                        <td colspan="1" rowspan="2" class="s-label border-bottom-0 left-head left-head">RATING<br>(If Applicable)</td>
+                        <td colspan="1" rowspan="2" class="s-label border-bottom-0 left-head">DATE OF EXAMINATION / CONFERMENT</td>
+                        <td colspan="3" rowspan="2" class="s-label border-bottom-0 left-head">PLACE OF EXAMINATION / CONFERMENT</td>
+                        <td colspan="2" class="s-label border-bottom-0 left-head">LICENSE<br>(if applicable)</td>
                     </tr>
-					<tr class="text-center">
-                        <td colspan="1" class="s-label left-head">From</td>
-                        <td colspan="1" class="s-label left-head">To</td>
+                    <tr class="text-center">
+                        <td colspan="1" class="s-label left-head">NUMBER</td>
+                        <td colspan="1" class="s-label left-head">Date of Validity</td>
                     </tr>
-					 <?php 
+					
+					<?php 
 						require('db_config.php');
 						$id = $_GET['print'];
 						
-						$sql = "SELECT * FROM tbl_voluntary_work WHERE employee_id=\"$id\"  ORDER BY voluntary_work_id LIMIT 0, 7";
-						$vols = $mysqli->query($sql);
+						$sql = "SELECT * FROM tbl_eligibility WHERE employee_id=\"$id\"  ORDER BY civil_service_id LIMIT 7, 7";
+						$eligs = $mysqli->query($sql);
 						
-						$num_rows_vols2 = mysqli_num_rows($vols);
+						$num_rows_eligs = mysqli_num_rows($eligs);
+								
 					
-						while($vol = $vols->fetch_assoc()){
+						while($elig = $eligs->fetch_assoc()){
 					?>
-					 <tr>
-                        <td colspan="6"><b><?php echo $vol['name_address'] ?></b></td>
-                        <td colspan="1" class="text-center"><b><?php $vol['voluntary_from'];
-                         $dmonth = substr($vol['voluntary_from'], 5, 2); 
-                         $dday = substr($vol['voluntary_from'], 8, 2);
-                         $dyear = substr($vol['voluntary_from'], 0, 4);
+                    <tr>
+                        <td colspan="5"><b><?php echo $elig['descriptionx'] ?></b></td>
+                        <td colspan="1"><b><?php echo $elig['rating'] ?></b></td>
+                        <td colspan="2"><b><?php $elig['date_exam'];
+                         $dmonth = substr($elig['date_exam'], 5, 2); 
+                         $dday = substr($elig['date_exam'], 8, 2);
+                         $dyear = substr($elig['date_exam'], 0, 4);
 
                         echo $totalbd = $dmonth . "-" . $dday . "-" . $dyear;
                         ?></b></td> 
-                       <td colspan="1" class="text-center"><b><?php $vol['voluntary_to'];
-                         $dmonth = substr($vol['voluntary_to'], 5, 2); 
-                         $dday = substr($vol['voluntary_to'], 8, 2);
-                         $dyear = substr($vol['voluntary_to'], 0, 4);
-
-                        echo $totalbd = $dmonth . "-" . $dday . "-" . $dyear;
+                        <td colspan="2"><b><?php echo $elig['place_examination'] ?></b></td>
+                        <td colspan="1"><b><?php echo $elig['cert_no'] ?></b></td>
+                        <td colspan="1"><b><?php  $elig['date_of_validity'] ;
+                         $dmonth = substr($elig['date_of_validity'] , 5, 2); 
+                         $dday = substr($elig['date_of_validity'] , 8, 2);
+                         $dyear = substr($elig['date_of_validity'] , 0, 4);
+                           echo $totalbd = $dmonth . "-" . $dday . "-" . $dyear;
                         ?></b></td> 
-                        <td colspan="1" class="text-center"><b><?php echo $vol['no_of_hours'] ?></b></td>
-                        <td colspan="3"><b><?php echo $vol['position_nature_of_work'] ?></b></td>
                     </tr>
-                    <?php } ?>
-					
-					<?php 
-					for( $num_rows_vols>=0; $num_rows_vols < (7 - $num_rows_vols2); $num_rows_vols++ ){
+                    <?php }?>
+				
+					<?php
+					for( $num_rows_eligs>=0; $num_rows_eligs <=6; $num_rows_eligs++ ){
 					?>
-					
-					 <tr>
-                        <td colspan="6"><b>&nbsp;</b></td>
-                        <td colspan="1" class="text-center"><b>&nbsp;</b></td>
-                        <td colspan="1" class="text-center"><b>&nbsp;</b></td>
-                        <td colspan="1" class="text-center"><b>&nbsp;</b></td>
-                        <td colspan="3"><b>&nbsp;</b></td>
+					<tr>
+                        <td colspan="5" class="empty"><b>&nbsp;</b></td>
+                        <td colspan="1" class="empty"><b>&nbsp;</b></td>
+                        <td colspan="2" class="empty"><b>&nbsp;</b></td>
+                        <td colspan="2" class="empty"><b>&nbsp;</b></td>
+                        <td colspan="1" class="empty"><b>&nbsp;</b></td>
+                        <td colspan="1" class="empty"><b>&nbsp;</b></td>
                     </tr>
-					
-					<?php } ?>
-					
-					
+					<?php  } ?> 
 					<tr>
                         <td colspan="12" class="text-white separator bg-transparent text-danger text-center cont">
                             <i>(Continue on seperate sheet if necessary)</i>
                         </td>
                     </tr>
 					<tr>
-                        <td colspan="12" class="text-white separator cat-head">VII. LEARNING AND DEVELOPMENT (L&D)
-                            INTERVENTIONS/TRAINING PROGRAMS ATTENDED<!--<br>
-                            <small><i>(Start from the most recent L&D/training program and include only the relevant
-                                    L&D/training taken for the last five (5) years for Division
-                                    Chief/Executive/Managerial positions)</i></small> -->
+                        <td colspan="12" class="text-white separator cat-head">
+                            V. WORK EXPERIENCE<br>
+                            <small><i>(Include private employment. Start from your recent work) Description of duties
+                                    should be indicated in the attached Work Experience sheet.</i></small>
                         </td>
                     </tr>
-					<tr class="text-center">
-                        <td colspan="6" rowspan="2" class="s-label border-bottom-0 left-head">
-                            <span class="count float-left">30.</span> TITLE OF LEARNING AND DEVELOPMENT
-                            INTERVENTIONS/TRAINING PROGRAMS<br>
-                            (Write in full)
+					<tr>
+                        <td colspan="2" class="s-label border-bottom-0 left-head text-center" style="width: 20%;">
+                            <span class="count float-left">28.</span>
+                            INCLUSIVE DATES<br>(mm/dd/yyyy)
+
+						</td>
+						<td colspan="4" class="s-label border-bottom-0 left-head text-center" rowspan="2">
+                            POSITION TITLE<br>
+                            Write in full/Do not abbreviate)
                         </td>
-                        <td colspan="2" class="s-label border-bottom-0 left-head">INCLUSIVE DATES</td>
-                        <td colspan="1" rowspan="2" class="s-label border-bottom-0 left-head">NUMBER OF HOURS</td>
-                        <td colspan="1" rowspan="2" class="s-label border-bottom-0 left-head">Type of LD ( Managerial/
-                            Supervisory/Technical/etc)</td>
-                        <td colspan="2" rowspan="2" class="s-label border-bottom-0 left-head">CONDUCTED/ SPONSORED BY<br>(Write in full)</td>
-                    </tr>
-					<tr class="text-center">
-                        <td colspan="1" class="s-label left-head">From</td>
-                        <td colspan="1" class="s-label left-head">To</td>
-                        
+						<td colspan="2" class=" left-head text-center" rowspan="2"> 
+						DEPARTMENT  / AGENCY / OFFICE / COMPANY <Br>
+						(Write in full/Do not abbreviate)
+						</td>
+						<td colspan="1" class="s-label border-bottom-0 left-head text-center" rowspan="2">MONTHLY<br>SALARY</td>
+                        <td colspan="1" class="s-label border-bottom-0 left-head" rowspan="2"><small>SALARY/ JOB/ PAY<br>GRADE (if
+                                applicable)& STEP (Format "00-0")/ INCREMENT</small></td>
+                        <td colspan="1" class="s-label border-bottom-0 left-head text-center" rowspan="2">STATUS OF<br>APPOINTMENT</td>
+                        <td colspan="1" class="s-label border-bottom-0 left-head text-center" rowspan="2">GOV'T SERVICE<br>
+                            <small>(Y/ N)</small></td>
+						
+					</tr>
+					<tr>
+                        <td colspan="1" width="10%" class="text-center left-head">
+                          From  
+                        </td>
+                        <td colspan="1" width="10%"  class="text-center left-head">
+                          Until
+                        </td>
                     </tr>
 					<?php 
 					require('db_config.php');
 					$id = $_GET['print'];
 					
-					$sql = "SELECT * FROM tbl_training WHERE employee_id=\"$id\"  ORDER BY training_id LIMIT 0, 21";
-					$trains = $mysqli->query($sql);
+					$sql = "SELECT * FROM tbl_work_experience WHERE employee_id=\"$id\"  ORDER BY work_experience_id LIMIT 28, 28";
+					$works = $mysqli->query($sql);
 					
-					$num_rows_trains2 = mysqli_num_rows($trains);
+					$num_rows_works2 = mysqli_num_rows($works);
 					
-					while($train = $trains->fetch_assoc()){
+					
+					while($work = $works->fetch_assoc()){
 					?>
 					<tr>
-                        <td colspan="6"><b><?php echo $train['title'] ?></b></td>
-                        
-                          <td colspan="1" class="text-center"><b><?php $train['att_from'];
-                         $dmonth = substr($train['att_from'] , 5, 2); 
-                         $dday = substr($train['att_from'] , 8, 2);
-                         $dyear = substr($train['att_from'] , 0, 4);
+                        <td colspan="1" width="10%" class="text-center">
+                        <b><?php  $work['work_from'];
+                                 $dmonth = substr($work['work_from'], 5, 2); 
+                                 $dday = substr($work['work_from'], 8, 2);
+                                 $dyear = substr($work['work_from'], 0, 4);
 
-                        echo $totalbd = $dmonth . "-" . $dday . "-" . $dyear;
+                                echo $totalbd = $dmonth . "-" . $dday . "-" . $dyear;
                         ?></b></td> 
-                     
-                        
-                          <td colspan="1" class="text-center"><b><?php $train['att_to'];
-                         $dmonth = substr($train['att_to'] , 5, 2); 
-                         $dday = substr($train['att_to'] , 8, 2);
-                         $dyear = substr($train['att_to'] , 0, 4);
+                                        
+                            <td colspan="1" width="10%"  class="text-center"><b><?php  $work['work_to'];
+                                 $dmonth = substr($work['work_from'], 5, 2); 
+                                 $dday = substr($work['work_from'], 8, 2);
+                                 $dyear = substr($work['work_from'], 0, 4);
 
-                        echo $totalbd = $dmonth . "-" . $dday . "-" . $dyear;
+                                echo $totalbd = $dmonth . "-" . $dday . "-" . $dyear;
                         ?></b></td> 
-                     
-                        <td colspan="1" class="text-center"><b><?php echo $train['no_hours'] ?></b></td>
-                        <td colspan="1"><b><?php echo $train['type_of_ld'] ?></b></td>
-                        <td colspan="2"><b><?php echo $train['conducted_by'] ?></b></td>
+                        <td colspan="4"><b><?php echo $work['position_title'] ?></b></td>
+                        <td colspan="2"><b><?php echo $work['department_agency'] ?></b></td>
+                        <td colspan="1"><b><?php echo $work['monthly_salary'] ?></b></td>
+                        <td colspan="1"><b><?php echo $work['salary_job_step'] ?></b></td>
+                        <td colspan="1"><b><?php echo $work['status_appointment'] ?></b></td>
+                        <td colspan="1"><b><?php echo $work['government_service_y_n'] ?></b></td>
                     </tr>
                     <?php } ?>
-					
 					<?php 
-					for( $num_rows_trains>=0; $num_rows_trains < (21 - $num_rows_trains2); $num_rows_trains++ ){
+					for( $num_rows_works>=0; $num_rows_works < (28 - $num_rows_works2); $num_rows_works++ ){
 					?>
-					
-					 <tr>
-                        <td colspan="6"><b>&nbsp;</b></td>
-                        <td colspan="1"><b>&nbsp;</b></td>
-                        <td colspan="1"><b>&nbsp;</b></td>
-                        <td colspan="1"><b>&nbsp;</b></td>
-                        <td colspan="1"><b>&nbsp;</b></td>
-                        <td colspan="2"><b>&nbsp;</b></td>
-                    </tr>
-					
-					<?php } ?>
 					<tr>
-                        <td colspan="12" class="text-white separator bg-transparent text-danger text-center cont">
-                            <i>(Continue on seperate sheet if necessary)</i>
-                        </td>
-                    </tr>
-					<tr>
-                        <td colspan="12" class="text-white separator cat-head">VIII. OTHER INFORMATION</td>
-                    </tr>
-                    <tr class="text-center">
-                        <td colspan="4" class="s-label left-head">
-                            <span class="count float-left">31.</span> SPECIAL SKILLS and HOBBIES
-                        </td>
-                        <td colspan="4" class="s-label left-head">
-                            <span class="count float-left">32.</span> NON-ACADEMIC DISTINCTIONS / RECOGNITION<br>(Write
-                            in full)
-                        </td>
-                        <td colspan="4" class="s-label left-head">
-                            <span class="count float-left">33.</span> MEMBERSHIP IN ASSOCIATION/ORGANIZATION<br>(Write
-                            in full)
-                        </td>
-                    </tr>
-					<tr>
-                        <td colspan="4"><b>
-						<?php 
-						if ($sp1special_skills_hobbies==""){
-						echo '&nbsp;';
-						}else{
-						echo $sp1special_skills_hobbies; 
-						}
-						?></b></td>
-						
-						
-                        <td colspan="4"><b><?php echo $na1non_academic_distinctions; ?></b></td>
-                        <td colspan="4"><b><?php echo $ma1membership_asso_organization; ?></b></td>
-                    </tr>
-                    <tr>
-                        <td colspan="4"><b>
-						<?php 
-						if ($sp2special_skills_hobbies==""){
-						echo '&nbsp;';
-						}else{
-						echo $sp2special_skills_hobbies; 
-						}
-						 ?></b></td>
-                        <td colspan="4"><b><?php echo $na2non_academic_distinctions; ?></b></td>
-                        <td colspan="4"><b><?php echo $ma2membership_asso_organization; ?></b></td>
-                    </tr>
-                    <tr>
-                        <td colspan="4"><b>
-						<?php 
-						if ($sp3special_skills_hobbies==""){
-						echo '&nbsp;';
-						}else{
-						echo $sp3special_skills_hobbies; 
-						}
-						 ?>
-						
-						</b></td>
-                        <td colspan="4"><b><?php echo $na3non_academic_distinctions; ?></b></td>
-                        <td colspan="4"><b><?php echo $ma3membership_asso_organization; ?></b></td>
-                    </tr>
-                    <tr>
-                        <td colspan="4"><b>
-						<?php 
-						if ($sp4special_skills_hobbies==""){
-						echo '&nbsp;';
-						}else{
-						echo $sp4special_skills_hobbies; 
-						}
-						 ?>
-						
-						</b></td>
-                        <td colspan="4"><b><?php echo $na4non_academic_distinctions; ?></b></td>
-                        <td colspan="4"><b><?php echo $ma4membership_asso_organization; ?></b></td>
-                    </tr>
-					
-					<tr>
-                        <td colspan="4"><b>&nbsp;</b></td>
-                        <td colspan="4"><b>&nbsp;</b></td>
-                        <td colspan="4"><b>&nbsp;</b></td>
-                    </tr>
-					<tr>
-                        <td colspan="4"><b>&nbsp;</b></td>
-                        <td colspan="4"><b>&nbsp;</b></td>
-                        <td colspan="4"><b>&nbsp;</b></td>
-                    </tr>
-					<tr>
-                        <td colspan="4"><b>&nbsp;</b></td>
-                        <td colspan="4"><b>&nbsp;</b></td>
-                        <td colspan="4"><b>&nbsp;</b></td>
-                    </tr>
-					<tr>
-                        <td colspan="4"><b>&nbsp;</b></td>
-                        <td colspan="4"><b>&nbsp;</b></td>
-                        <td colspan="4"><b>&nbsp;</b></td>
-                    </tr>
-					
-					
-					
-					
-					<tr>
-                        <td colspan="12" class="text-white separator bg-transparent text-danger text-center cont">
-                            <i>(Continue on seperate sheet if necessary)</i>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="4" class="text-center sig"><i><b>SIGNATURE</b></i></td>
-                        <td colspan="5"></td>
-                        <td colspan="1" class="text-center sig"><i><b>DATE</b></i></td>
-                        <td colspan="2"></td>
-                    </tr>
-<table>
+<style>					
+table#working_experience {
+border: 0px solid black;
+border-collapse: collapse;
 
+}
+
+table#working_experience td {
+border: 0px solid black;
+border-collapse: collapse;
+}
+</style>
+                        <td colspan="1" width="10%" class="text-center empty">
+                        </td>
+                        <td colspan="1" width="10%"  class="text-center empty">
+                        </td>
+                        <td colspan="4" class="empty"><b>&nbsp;</b></td>
+                        <td colspan="2" class="empty"><b>&nbsp;</b></td>
+                        <td colspan="1" class="empty"><b>&nbsp;</b></td>
+                        <td colspan="1" class="empty"><b>&nbsp;</b></td>
+                        <td colspan="1" class="empty"><b>&nbsp;</b></td>
+                        <td colspan="1" class="empty"><b>&nbsp;</b></td>
+                    </tr>
+					<?php  } ?> 
+					<tr>
+                        <td colspan="12" class="text-white separator bg-transparent text-danger text-center cont">
+                            <i>(Continue on seperate sheet if necessary)</i>
+                        </td>
+                    </tr>
+					<tr>
+                        <td colspan="2" class="text-center sig"><i><b>SIGNATURE</b></i></td>
+                        <td colspan="5"></td>
+                        <td colspan="2" class="text-center sig"><i><b>DATE</b></i></td>
+                        <td colspan="3"></td>
+                    </tr>
+					<!-- End of Page 2 -->
+</table>
 </div>
 
 </body>
 
 </html>
 
-    <script type="text/javascript">
-    function PrintElement(elem) {
-        var divName = "main-tbl";
-        var printContents = document.getElementById(divName).innerHTML;
-        var originalContents = document.body.innerHTML;
-        document.body.innerHTML = printContents;
-        window.print();
-        document.body.innerHTML = originalContents;
-    }
+<script type="text/javascript">
+function PrintElement(elem) {
+    var divName = "main-tbl";
+    var printContents = document.getElementById(divName).innerHTML;
+    var originalContents = document.body.innerHTML;
+    document.body.innerHTML = printContents;
+    window.print();
+    document.body.innerHTML = originalContents;
+}
 
-    function PrintElement1(elem) {
-        var divName = "c1";
-        var printContents = document.getElementById(divName).innerHTML;
-        var originalContents = document.body.innerHTML;
-        document.body.innerHTML = printContents;
-        window.print();
-        document.body.innerHTML = originalContents;
-    }
+function PrintElement1(elem) {
+    var divName = "c1";
+    var printContents = document.getElementById(divName).innerHTML;
+    var originalContents = document.body.innerHTML;
+    document.body.innerHTML = printContents;
+    window.print();
+    document.body.innerHTML = originalContents;
+}
 
-    function PrintElement2(elem) {
-        var divName = "c2";
-        var printContents = document.getElementById(divName).innerHTML;
-        var originalContents = document.body.innerHTML;
-        document.body.innerHTML = printContents;
-        window.print();
-        document.body.innerHTML = originalContents;
-    }
+function PrintElement2(elem) {
+    var divName = "c2";
+    var printContents = document.getElementById(divName).innerHTML;
+    var originalContents = document.body.innerHTML;
+    document.body.innerHTML = printContents;
+    window.print();
+    document.body.innerHTML = originalContents;
+}
 
-    function PrintElement3(elem) {
-        var divName = "c3";
-        var printContents = document.getElementById(divName).innerHTML;
-        var originalContents = document.body.innerHTML;
-        document.body.innerHTML = printContents;
-        window.print();
-        document.body.innerHTML = originalContents;
-    }
+function PrintElement3(elem) {
+    var divName = "c3";
+    var printContents = document.getElementById(divName).innerHTML;
+    var originalContents = document.body.innerHTML;
+    document.body.innerHTML = printContents;
+    window.print();
+    document.body.innerHTML = originalContents;
+}
 
-    function PrintElement4(elem) {
-        var divName = "c4";
-        var printContents = document.getElementById(divName).innerHTML;
-        var originalContents = document.body.innerHTML;
-        document.body.innerHTML = printContents;
-        window.print();
-        document.body.innerHTML = originalContents;
-    }
-    </script>
+function PrintElement4(elem) {
+    var divName = "c4";
+    var printContents = document.getElementById(divName).innerHTML;
+    var originalContents = document.body.innerHTML;
+    document.body.innerHTML = printContents;
+    window.print();
+    document.body.innerHTML = originalContents;
+}
+</script>
 
-    <script type="text/javascript">
-            
-        function codespeedy(){
-        var print_div = document.getElementById("pds_print");
-    var print_area = window.open();
-    print_area.document.write(print_div.innerHTML);
-    print_area.document.close();
-    print_area.focus();
-    print_area.print();
-    print_area.close();
-    // This is the code print a particular div element
-        }
-    </script>
+  <script type="text/javascript">
+        
+    function codespeedy(){
+      var print_div = document.getElementById("pds_print");
+var print_area = window.open();
+print_area.document.write(print_div.innerHTML);
+print_area.document.close();
+print_area.focus();
+print_area.print();
+print_area.close();
+// This is the code print a particular div element
+    }
+  </script>
 
 

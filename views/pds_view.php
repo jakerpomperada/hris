@@ -1,6 +1,43 @@
 <?php
 $id = $_GET["id"];
 
+$nav = array("print_pds0.php");
+$nav_final = "";
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "hris";
+
+$db = new mysqli($servername, $username, $password, $dbname);
+
+
+$query = mysqli_query($db, "SELECT * FROM tbl_children WHERE employee_id=\"$id\"");
+if(mysqli_num_rows($query) > 12){
+	array_push($nav, "print_pds0-1.php");
+}
+
+array_push($nav, "print_pds1.php");
+
+$query = mysqli_query($db, "SELECT * FROM tbl_eligibility WHERE employee_id=\"$id\"");
+$query2 = mysqli_query($db, "SELECT * FROM tbl_work_experience WHERE employee_id=\"$id\"");
+if(mysqli_num_rows($query) > 7 || mysqli_num_rows($query2) > 28){
+	array_push($nav, "print_pds1-1.php");
+}
+
+array_push($nav, "print_pds2.php");
+
+$query = mysqli_query($db, "SELECT * FROM tbl_voluntary_work WHERE employee_id=\"$id\"");
+$query2 = mysqli_query($db, "SELECT * FROM tbl_training WHERE employee_id=\"$id\"");
+$query2 = mysqli_query($db, "SELECT * FROM tbl_skills_hobbies WHERE employee_id=\"$id\"");
+if(mysqli_num_rows($query) > 7 || mysqli_num_rows($query2) > 28){
+	array_push($nav, "print_pds2-1.php");
+}
+
+array_push($nav, "print_pds3.php");
+
+$nav_final = json_encode($nav);
+
 ?>
 
 <!DOCTYPE html>
@@ -13,8 +50,15 @@ $id = $_GET["id"];
 			margin: 0 auto;
 			margin-bottom: 10px !important;
 		}
+		@media print{
+			#controller
+			{
+				display: none !important;
+			}
+		}
 	</style>
 	<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="live.js"></script>
 </head>
 <body style="font-family: Arial; margin: 0">
 	<div id="controller" style="text-align: center; background: linear-gradient(to bottom, #93291e, #93291e); padding-top: 10px; padding-bottom: 20px;">
@@ -31,6 +75,8 @@ $id = $_GET["id"];
 <script type="text/javascript">
 	var x = 0;
 	var id = '<?php echo $id; ?>';
+	var str = '<?php echo $nav_final; ?>';
+	var nav = JSON.parse(str);
 	
 	function load1(){
 		if(x == 0){
@@ -40,10 +86,12 @@ $id = $_GET["id"];
 			$('#prev').prop('disabled', false);
 			$('#next').prop('disabled', false);
 		}
-		if(x == 3){
+		if(x == nav.length){
 			$('#next').prop('disabled', true);
+		}else{
+			$('#next').prop('disabled', false);
 		}
-		$('#cont').load('print_pds' + x + '.php?print=' + id);
+		$('#cont').load(nav[x] + '?print=' + id);
 	}
 
 	$('#prev').click(function(){

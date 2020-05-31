@@ -160,7 +160,7 @@ if (count($record3) == 1 ) {
 
         // family children 0
         //$record4 = mysqli_query($db, "SELECT * FROM tbl_children WHERE employee_id=$id LIMIT 0,1");
-$record4 = mysqli_query($db,"SELECT * FROM `tbl_children` Where `tbl_children`.`employee_id` = '$id' order by child_id LIMIT 0,1");
+$record4 = mysqli_query($db,"SELECT * FROM `tbl_children` Where `tbl_children`.`employee_id` = '$id' order by child_id LIMIT 12,1");
 
 if (count($record4) == 1 ) {
    $fc = mysqli_fetch_array($record4);
@@ -170,7 +170,7 @@ if (count($record4) == 1 ) {
 
          // family children 1
         //$record5 = mysqli_query($db, "SELECT * FROM tbl_children WHERE employee_id=$id LIMIT 1,1");
-$record5 = mysqli_query($db,"SELECT * FROM `tbl_children` Where `tbl_children`.`employee_id` = '$id' order by child_id LIMIT 1,1");
+$record5 = mysqli_query($db,"SELECT * FROM `tbl_children` Where `tbl_children`.`employee_id` = '$id' order by child_id LIMIT 13,1");
 
 if (count($record5) == 1 ) {
    $fc = mysqli_fetch_array($record5);
@@ -180,7 +180,7 @@ if (count($record5) == 1 ) {
 
         // family children 2
         //$record6 = mysqli_query($db, "SELECT * FROM tbl_children WHERE employee_id=$id LIMIT 2,1");
-$record6 = mysqli_query($db,"SELECT * FROM `tbl_children` Where `tbl_children`.`employee_id` = '$id' order by child_id LIMIT 2,1");
+$record6 = mysqli_query($db,"SELECT * FROM `tbl_children` Where `tbl_children`.`employee_id` = '$id' order by child_id LIMIT 14,1");
 
 if (count($record6) == 1 ) {
    $fc = mysqli_fetch_array($record6);
@@ -190,7 +190,7 @@ if (count($record6) == 1 ) {
 
         // family children 3
         //$record7 = mysqli_query($db, "SELECT * FROM tbl_children WHERE employee_id=$id LIMIT 3,1");
-$record7 = mysqli_query($db,"SELECT * FROM `tbl_children` Where `tbl_children`.`employee_id` = '$id' order by child_id LIMIT 3,1");
+$record7 = mysqli_query($db,"SELECT * FROM `tbl_children` Where `tbl_children`.`employee_id` = '$id' order by child_id LIMIT 15,1");
 
 if (count($record7) == 1 ) {
    $fc = mysqli_fetch_array($record7);
@@ -200,7 +200,7 @@ if (count($record7) == 1 ) {
 
         // family children 4
         //$record8 = mysqli_query($db, "SELECT * FROM tbl_children WHERE employee_id=$id LIMIT 4,1");
-$record8 = mysqli_query($db,"SELECT * FROM `tbl_children` Where `tbl_children`.`employee_id` = '$id' order by child_id LIMIT 4,1");
+$record8 = mysqli_query($db,"SELECT * FROM `tbl_children` Where `tbl_children`.`employee_id` = '$id' order by child_id LIMIT 16,1");
 
 if (count($record8) == 1 ) {
    $fc = mysqli_fetch_array($record8);
@@ -209,7 +209,7 @@ if (count($record8) == 1 ) {
 }
 
         // family children 5
-$record9 = mysqli_query($db, "SELECT * FROM tbl_children WHERE employee_id=$id LIMIT 5,1");
+$record9 = mysqli_query($db, "SELECT * FROM tbl_children WHERE employee_id=$id LIMIT 17,1");
 
 if (count($record9) == 1 ) {
    $fc = mysqli_fetch_array($record9);
@@ -218,7 +218,7 @@ if (count($record9) == 1 ) {
 }
 
          // family children 6
-$record10 = mysqli_query($db, "SELECT * FROM tbl_children WHERE employee_id=$id LIMIT 6,1");
+$record10 = mysqli_query($db, "SELECT * FROM tbl_children WHERE employee_id=$id LIMIT 18,1");
 
 if (count($record10) == 1 ) {
    $fc = mysqli_fetch_array($record10);
@@ -227,7 +227,7 @@ if (count($record10) == 1 ) {
 }
 
          // family children 7
-$record11 = mysqli_query($db, "SELECT * FROM tbl_children WHERE employee_id=$id LIMIT 7,1");
+$record11 = mysqli_query($db, "SELECT * FROM tbl_children WHERE employee_id=$id LIMIT 19,1");
 
 if (count($record11) == 1 ) {
    $fc = mysqli_fetch_array($record11);
@@ -236,7 +236,7 @@ if (count($record11) == 1 ) {
 }
 
          // family children 8
-$record12 = mysqli_query($db, "SELECT * FROM tbl_children WHERE employee_id=$id LIMIT 8,1");
+$record12 = mysqli_query($db, "SELECT * FROM tbl_children WHERE employee_id=$id LIMIT 20,1");
 
 if (count($record12) == 1 ) {
    $fc = mysqli_fetch_array($record12);
@@ -245,7 +245,7 @@ if (count($record12) == 1 ) {
 }
 
          // family children 9
-$record13 = mysqli_query($db, "SELECT * FROM tbl_children WHERE employee_id=$id LIMIT 9,1");
+$record13 = mysqli_query($db, "SELECT * FROM tbl_children WHERE employee_id=$id LIMIT 21,1");
 
 if (count($record13) == 1 ) {
    $fc = mysqli_fetch_array($record13);
@@ -254,7 +254,7 @@ if (count($record13) == 1 ) {
 }
 
          // family children 10
-$record14 = mysqli_query($db, "SELECT * FROM tbl_children WHERE employee_id=$id LIMIT 10,1");
+$record14 = mysqli_query($db, "SELECT * FROM tbl_children WHERE employee_id=$id LIMIT 22,1");
 
 if (count($record14) == 1 ) {
    $fc = mysqli_fetch_array($record14);
@@ -263,7 +263,7 @@ if (count($record14) == 1 ) {
 }
 
          // family children 11
-$record15 = mysqli_query($db, "SELECT * FROM tbl_children WHERE employee_id=$id LIMIT 11,1");
+$record15 = mysqli_query($db, "SELECT * FROM tbl_children WHERE employee_id=$id LIMIT 23,1");
 
 if (count($record15) == 1 ) {
    $fc = mysqli_fetch_array($record15);
@@ -610,18 +610,18 @@ if (count($record29) == 1 ) {
         <td colspan="1" class="s-label border-bottom-0 left-head bot">
             <span class="count">2.</span> SURNAME
         </td>
-        <td colspan="11"> <b><?php echo $surname; ?></b></td>
+        <td colspan="11"> <b><?php //echo $surname; ?></b></td>
     </tr>
     <tr>
         <td colspan="1" class="s-label border-0 left-head bot"><span class="count"></span> &nbsp;&nbsp;&nbsp;&nbsp;FIRST NAME</td>
-        <td colspan="9"><b><?php echo $first_name; ?></b></td>
+        <td colspan="9"><b><?php //echo $first_name; ?></b></td>
         <td colspan="2" class="align-top left-head"><small>NAME EXTENSION (JR.,SR)
-        </small><b><?php echo $name_extension; ?></b>
+        </small><b><?php //echo $name_extension; ?></b>
     </td>
 </tr>
 <tr>
     <td colspan="1" class="s-label border-0 left-head"><span class="count"></span> &nbsp;&nbsp;&nbsp;&nbsp;MIDDLE NAME</td>
-    <td colspan="11"><b><?php echo $middle_name; ?></b></td>
+    <td colspan="11"><b><?php //echo $middle_name; ?></b></td>
 </tr>
 <tr>
     <td colspan="1" rowspan="2" class="s-label border-bottom-0 left-head">
@@ -635,7 +635,7 @@ if (count($record29) == 1 ) {
     $dday = substr($date_birth, 8, 2);
     $dyear = substr($date_birth, 0, 4);
 
-    echo str_replace("--", "", $totalbd = $dmonth . "-" . $dday . "-" . $dyear);
+    //echo str_replace("--", "", $totalbd = $dmonth . "-" . $dday . "-" . $dyear);
     ?></b></td> 
     <td colspan="3" rowspan="4" class="s-label align-top border-bottom-0 left-head" style="vertical-align: top; padding-top: 10px;">
         <span class="count">16.</span> CITIZENSHIP<br><br>
@@ -646,21 +646,21 @@ if (count($record29) == 1 ) {
     <td colspan="3" rowspan="2" class="bot">
         <div class="d-flex justify-content-between align-items-center ml-2 mt-2 mb-0 mr-2">
             <div class="form-group mb-0">
-                <input type="checkbox" <?php echo $citizenshipy; ?> disabled>
+                <input type="checkbox" <?php //echo $citizenshipy; ?> disabled>
                 <label for="my-input">Filipino</label>
             </div>
             <div class="form-group mb-0">
-                <input type="checkbox" <?php echo $citizenshipn; ?> disabled>
+                <input type="checkbox" <?php //echo $citizenshipn; ?> disabled>
                 <label for="my-input">Dual Citizenship</label>
             </div>
         </div>
         <div class="d-flex justify-content-between align-items-center ml-2 mt-2 mb-0 mr-2">
             <div class="form-group mb-0">
-                <input type="checkbox" <?php echo $dual_citizenshipy; ?> disabled>
+                <input type="checkbox" <?php //echo $dual_citizenshipy; ?> disabled>
                 <label for="my-input">by birth</label>
             </div>
             <div class="form-group mb-0">
-                <input type="checkbox" <?php echo $dual_citizenshipn; ?> disabled>
+                <input type="checkbox" <?php //echo $dual_citizenshipn; ?> disabled>
                 <label for="my-input">by naturalization</label>
             </div>
         </div>
@@ -671,19 +671,19 @@ if (count($record29) == 1 ) {
 </tr>
 <tr>
     <td colspan="1" class="s-label left-head"><span class="count">4.</span> PLACE OR BIRTH</td>
-    <td colspan="5"><b><?php echo $place_of_birth; ?></b></td>
-    <td colspan="3" style="border-bottom: none;"><b><?php echo $country; ?></b></td>
+    <td colspan="5"><b><?php //echo $place_of_birth; ?></b></td>
+    <td colspan="3" style="border-bottom: none;"><b><?php //echo $country; ?></b></td>
 </tr>
 <tr>
     <td colspan="1" class="s-label left-head"><span class="count">5.</span> SEX</td>
     <td colspan="5">
         <div class="d-flex justify-content-between align-items-center ml-2 mt-2 mb-0 mr-2">
             <div class="form-group mb-0">
-                <input type="checkbox" <?php echo $sexy; ?> disabled>
+                <input type="checkbox" <?php //echo $sexy; ?> disabled>
                 <label for="my-input">Male</label>
             </div>
             <div class="form-group mb-0">
-                <input type="checkbox" <?php echo $sexn; ?> disabled>
+                <input type="checkbox" <?php //echo $sexn; ?> disabled>
                 <label for="my-input">Female</label>
             </div>
         </div>
@@ -695,23 +695,23 @@ if (count($record29) == 1 ) {
     <td colspan="5" rowspan="2" style="border-top: none !important;">
         <div class="d-flex justify-content-between align-items-center ml-2 mt-2 mb-0 mr-2">
             <div class="form-group mb-0">
-                <input type="checkbox" <?php echo $civil_statuss; ?> disabled>
+                <input type="checkbox" <?php //echo $civil_statuss; ?> disabled>
                 <label for="my-input">Single</label>
             </div>
             <div class="form-group mb-0">
-                <input type="checkbox" <?php echo $civil_statusm; ?> disabled>
+                <input type="checkbox" <?php //echo $civil_statusm; ?> disabled>
                 <label for="my-input">Married</label>
             </div>
             <div class="form-group mb-0">
-                <input type="checkbox" <?php echo $civil_statusw; ?> disabled>
+                <input type="checkbox" <?php //echo $civil_statusw; ?> disabled>
                 <label for="my-input">Widowed</label>
             </div>
             <div class="form-group mb-0">
-                <input type="checkbox" <?php echo $civil_statusse; ?> disabled>
+                <input type="checkbox" <?php //echo $civil_statusse; ?> disabled>
                 <label for="my-input">Separated</label>
             </div>
             <div class="form-group mb-0">
-                <input type="checkbox" <?php echo $civil_statuso; ?> disabled>
+                <input type="checkbox" <?php //echo $civil_statuso; ?> disabled>
                 <label for="my-input">Other/s</label>
             </div>
         </div>
@@ -719,70 +719,70 @@ if (count($record29) == 1 ) {
     <td colspan="2" rowspan="3" class="s-label align-top border-bottom-0 small left-head bot">
         <span class="count">17.</span> RESIDENTIAL ADDRESS
     </td>
-    <td colspan="2"><b><?php echo $residential_house_block_lot_no; ?></b></td>
-    <td colspan="2"><b><?php echo $residential_street; ?></b></td>
+    <td colspan="2"><b><?php //echo $residential_house_block_lot_no; ?></b></td>
+    <td colspan="2"><b><?php //echo $residential_street; ?></b></td>
 </tr>
 <tr>
-    <td colspan="3"><b><?php echo $residential_subdivision_village; ?></b></td>
-    <td colspan="2"><b><?php echo $residential_barangay; ?></b></td>
+    <td colspan="3"><b><?php //echo $residential_subdivision_village; ?></b></td>
+    <td colspan="2"><b><?php //echo $residential_barangay; ?></b></td>
 </tr>
 <tr>
     <td colspan="1" class="s-label left-head"><span class="count">7.</span> HEIGHT (m)</td>
-    <td colspan="5"><b><?php echo $height_m; ?></b></td>
-    <td colspan="2"><b><?php echo $residential_city_municipality; ?></b></td>
-    <td colspan="2"><b><?php echo $residential_province; ?></b></td>
+    <td colspan="5"><b><?php //echo $height_m; ?></b></td>
+    <td colspan="2"><b><?php //echo $residential_city_municipality; ?></b></td>
+    <td colspan="2"><b><?php //echo $residential_province; ?></b></td>
 </tr>
 <tr>
     <td colspan="1" class="s-label left-head"><span class="count">8.</span> WEIGHT (kg)</td>
-    <td colspan="5"><b><?php echo $weight_m; ?></b></td>
+    <td colspan="5"><b><?php //echo $weight_m; ?></b></td>
     <td colspan="2" class="s-label border-0 text-center left-head top" style="text-align: center;">
         ZIP CODE
     </td>
-    <td colspan="4"><b><?php echo $residential_zipcode; ?></b></td>
+    <td colspan="4"><b><?php //echo $residential_zipcode; ?></b></td>
 </tr>
 <tr>
     <td colspan="1" class="s-label left-head"><span class="count">9.</span> BLOOD TYPE</td>
-    <td colspan="5"><b><?php echo $blood_type; ?></b></td>
+    <td colspan="5"><b><?php //echo $blood_type; ?></b></td>
     <td colspan="2" rowspan="3" class="s-label border-bottom-0 left-head bot"><span class="count">18.</span> PERMANENT ADDRESS
     </td>
-    <td colspan="2"><b><?php echo $permanent_house_block_lot_no; ?></b></td>
-    <td colspan="2"><b><?php echo $permanent_street; ?></b></td>
+    <td colspan="2"><b><?php //echo $permanent_house_block_lot_no; ?></b></td>
+    <td colspan="2"><b><?php //echo $permanent_street; ?></b></td>
 </tr>
 <tr>
     <td colspan="1" class="s-label left-head"><span class="count">10.</span> GSIS ID NO.</td>
-    <td colspan="5"><b><?php echo $gsis_id_no ; ?></b></td>
-    <td colspan="2"><b><?php echo $permanent_subdivision_village; ?></b></td>
-    <td colspan="2"><b><?php echo $permanent_barangay; ?></b></td>
+    <td colspan="5"><b><?php //echo $gsis_id_no ; ?></b></td>
+    <td colspan="2"><b><?php //echo $permanent_subdivision_village; ?></b></td>
+    <td colspan="2"><b><?php //echo $permanent_barangay; ?></b></td>
 </tr>
 <tr>
     <td colspan="1" class="s-label left-head"><span class="count">11.</span> PAG-IBIG NO.</td>
-    <td colspan="5"><b><?php echo $pagibig_id_no ; ?></b></td>
-    <td colspan="2"><b><?php echo $permanent_city_municipality; ?></b></td>
-    <td colspan="2"><b><?php echo $permanent_province; ?></b></td>
+    <td colspan="5"><b><?php //echo $pagibig_id_no ; ?></b></td>
+    <td colspan="2"><b><?php //echo $permanent_city_municipality; ?></b></td>
+    <td colspan="2"><b><?php //echo $permanent_province; ?></b></td>
 </tr>
 <tr>
     <td colspan="1" class="s-label left-head"><span class="count">12.</span> PHILHEALTH NO.</td>
-    <td colspan="5"><b><?php echo $philhealth_no ; ?></b></td>
+    <td colspan="5"><b><?php //echo $philhealth_no ; ?></b></td>
     <td colspan="2" class="s-label text-center border-0 left-head" style="text-align: center;">ZIP CODE</td>
-    <td colspan="4"><b><?php echo $permanent_zipcode; ?></b></td>
+    <td colspan="4"><b><?php //echo $permanent_zipcode; ?></b></td>
 </tr>
 <tr>
     <td colspan="1" class="s-label left-head"><span class="count">13.</span> SSS NO.</td>
-    <td colspan="5"><b><?php echo $sss_no ; ?></b></td>
+    <td colspan="5"><b><?php //echo $sss_no ; ?></b></td>
     <td colspan="2" class="s-label left-head"><span class="count">19.</span> TELEPHONE NO.</td>
-    <td colspan="4"><b><?php echo $telephone_no; ?></b></td>
+    <td colspan="4"><b><?php //echo $telephone_no; ?></b></td>
 </tr>
 <tr>
     <td colspan="1" class="s-label left-head"><span class="count">14.</span> TIN NO.</td>
-    <td colspan="5"><b><?php echo $tin_no ; ?></b></td>
+    <td colspan="5"><b><?php //echo $tin_no ; ?></b></td>
     <td colspan="2" class="s-label left-head"><span class="count">20.</span> MOBILE NO.</td>
-    <td colspan="4"><b><?php echo $mobile_no; ?></b></td>
+    <td colspan="4"><b><?php //echo $mobile_no; ?></b></td>
 </tr>
 <tr>
     <td colspan="1" class="s-label left-head"><span class="count">15.</span> AGENCY EMPLOYEE NO.</td>
-    <td colspan="5"><b><?php echo $agency_employee_no ; ?></b></td>
+    <td colspan="5"><b><?php //echo $agency_employee_no ; ?></b></td>
     <td colspan="2" class="s-label left-head"><span class="count">21.</span> EMAIL ADDRESS (if any)</td>
-    <td colspan="4"><b><?php echo $email_address; ?></b>
+    <td colspan="4"><b><?php //echo $email_address; ?></b>
     </td>
 </tr>
 <tr>
@@ -792,7 +792,7 @@ if (count($record29) == 1 ) {
     <td colspan="1" class="s-label border-bottom-0 left-head">
         <span class="count">22.</span> SPOUSE SURNAME
     </td>
-    <td colspan="5"><b><?php echo $spouses_surname; ?></b></td>
+    <td colspan="5"><b><?php //echo $spouses_surname; ?></b></td>
     <td colspan="3" class="s-label left-head">
         <span class="count">23.</span> NAME of CHILDREN (Write full name and list all)
     </td>
@@ -802,12 +802,12 @@ if (count($record29) == 1 ) {
     <td colspan="1" class="s-label border-0 left-head">
         <span class="count"></span> FIRST NAME
     </td>
-    <td colspan="4"><b><?php echo $sfirst_name; ?></b></td>
+    <td colspan="4"><b><?php //echo $sfirst_name; ?></b></td>
     <td colspan="1" class="align-top s-label left-head">
         <small>
             NAME EXTENSION (JR.,SR)
         </small>
-        <b><?php echo $sname_extension; ?></b>
+        <b><?php //echo $sname_extension; ?></b>
     </td>
     <td colspan="3"><b><?php echo $fcname_of_children; ?></b></td>
     <td colspan="3"><b><?php $fcdate_of_birth;
@@ -822,7 +822,7 @@ if (count($record29) == 1 ) {
     <td colspan="1" class="s-label border-0 left-head">
         <span class="count"></span> MIDDLE NAME
     </td>
-    <td colspan="5"><b><?php echo $smiddle_name; ?></b></td>
+    <td colspan="5"><b><?php //echo $smiddle_name; ?></b></td>
     <td colspan="3"><b><?php echo $fc1name_of_children; ?></b></td>
     <td colspan="3"><b><?php  $fc1date_of_birth; 
     $dmonth = substr($fc1date_of_birth, 5, 2); 
@@ -838,7 +838,7 @@ if (count($record29) == 1 ) {
     <td colspan="1" class="s-label left-head">
         <span class="count"></span> OCCUPATION
     </td>
-    <td colspan="5"><b><?php echo $soccupation; ?></b></td>
+    <td colspan="5"><b><?php //echo $soccupation; ?></b></td>
     <td colspan="3"><b><?php echo $fc2name_of_children; ?></b></td>
     <td colspan="3"><b><?php  $fc2date_of_birth; 
     $dmonth = substr($fc2date_of_birth, 5, 2); 
@@ -853,7 +853,7 @@ if (count($record29) == 1 ) {
     <td colspan="1" class="s-label left-head">
         <span class="count"></span> EMPLOYER/BUSINESS NAME
     </td>
-    <td colspan="5"><b><?php echo $semployer_business_name; ?></b></td>
+    <td colspan="5"><b><?php //echo $semployer_business_name; ?></b></td>
     <td colspan="3"><b><?php echo $fc3name_of_children; ?></b></td>
     <td colspan="3"><b><?php echo $fc3date_of_birth; 
     $dmonth = substr($fc3date_of_birth, 5, 2); 
@@ -868,7 +868,7 @@ if (count($record29) == 1 ) {
     <td colspan="1" class="s-label left-head">
         <span class="count"></span> BUSINESS ADDRESS
     </td>
-    <td colspan="5"><b><?php echo $sbusiness_address; ?></b></td>
+    <td colspan="5"><b><?php //echo $sbusiness_address; ?></b></td>
     <td colspan="3"><b><?php echo $fc4name_of_children; ?></b></td>
     <td colspan="3"><b><?php  $fc4date_of_birth; 
     $dmonth = substr($fc4date_of_birth, 5, 2); 
@@ -883,7 +883,7 @@ if (count($record29) == 1 ) {
     <td colspan="1" class="s-label left-head">
         <span class="count"></span> TELEPHONE NO.
     </td>
-    <td colspan="5"><b><?php echo $stelephone_no; ?></b></td>
+    <td colspan="5"><b><?php //echo $stelephone_no; ?></b></td>
     <td colspan="3"><b><?php echo $fc5name_of_children; ?></b></td>
     <td colspan="3"><b><?php  $fc5date_of_birth; 
     $dmonth = substr($fc5date_of_birth, 5, 2); 
@@ -897,7 +897,7 @@ if (count($record29) == 1 ) {
     <td colspan="1" class="s-label border-bottom-0 left-head">
         <span class="count left-head">24.</span> FATHER'S SURNAME
     </td>
-    <td colspan="5"><b><?php echo $fsurname; ?></b></td>
+    <td colspan="5"><b><?php //echo $fsurname; ?></b></td>
     <td colspan="3"><b><?php echo $fc6name_of_children; ?></b></td>
     <td colspan="3"><b><?php  $fc6date_of_birth;
     $dmonth = substr($fc6date_of_birth, 5, 2); 
@@ -911,12 +911,12 @@ if (count($record29) == 1 ) {
     <td colspan="1" class="s-label border-0 left-head">
         <span class="count"></span> FIRST NAME
     </td>
-    <td colspan="4"><b><?php echo $ffirst_name; ?></b></td>
+    <td colspan="4"><b><?php //echo $ffirst_name; ?></b></td>
     <td colspan="1" class="align-top s-label left-head">
         <small>
             NAME EXTENSION (JR.,SR)
         </small>
-        <b><?php echo $fname_extension; ?></b>
+        <b><?php //echo $fname_extension; ?></b>
     </td>
     <td colspan="3"><b><?php echo $fc7name_of_children; ?></b></td>
     <td colspan="3"><b><?php  $fc7date_of_birth; 
@@ -931,7 +931,7 @@ if (count($record29) == 1 ) {
     <td colspan="1" class="s-label border-0 left-head">
         <span class="count"></span> MIDDLE NAME
     </td>
-    <td colspan="5"><b><?php echo $fmiddle_name; ?></b></td>
+    <td colspan="5"><b><?php //echo $fmiddle_name; ?></b></td>
     <td colspan="3"><b><?php echo $fc8name_of_children; ?></b></td>
     <td colspan="3"><b><?php echo $fc8date_of_birth; 
     $dmonth = substr($fc8date_of_birth, 5, 2); 
@@ -945,7 +945,7 @@ if (count($record29) == 1 ) {
     <td colspan="1" class="s-label border-bottom-0 left-head">
         <span class="count">25.</span> MOTHERS MAIDEN NAME
     </td>
-    <td colspan="5"><b><?php echo $fmmaidenname; ?></b></td>
+    <td colspan="5"><b><?php //echo $fmmaidenname; ?></b></td>
     <td colspan="3"><b><?php echo $fc9name_of_children; ?></b></td>
     <td colspan="3"><b><?php  $fc9date_of_birth; 
     $dmonth = substr($fc9date_of_birth, 5, 2); 
@@ -959,7 +959,7 @@ if (count($record29) == 1 ) {
     <td colspan="1" class="s-label border-0 left-head">
         <span class="count"></span> SURNAME
     </td>
-    <td colspan="5"><b><?php echo $fmsurname; ?></b></td>
+    <td colspan="5"><b><?php //echo $fmsurname; ?></b></td>
     <td colspan="3"><b><?php echo $fc10name_of_children; ?></b></td>
     <td colspan="3"><b><?php  $fc10date_of_birth; 
 
@@ -974,7 +974,7 @@ if (count($record29) == 1 ) {
     <td colspan="1" class="s-label border-0 left-head">
         <span class="count"></span> FIRST NAME
     </td>
-    <td colspan="5"><b><?php echo $fmfirst_name; ?></b></td>
+    <td colspan="5"><b><?php //echo $fmfirst_name; ?></b></td>
     <td colspan="3"><b><?php echo $fc11name_of_children; ?></b></td>
     <td colspan="3"><b><?php  $fc11date_of_birth; 
     $dmonth = substr($fc11date_of_birth, 5, 2); 
@@ -989,7 +989,7 @@ if (count($record29) == 1 ) {
     <td colspan="1" class="s-label border-0 left-head">
         <span class="count"></span> MIDDLE NAME
     </td>
-    <td colspan="5"><b><?php echo $fmmiddle_name; ?></b></td>
+    <td colspan="5"><b><?php //echo $fmmiddle_name; ?></b></td>
     <td colspan="6" class="s-label text-danger text-center cont"><i><b>(Continue on seperate sheet if
     necessary)</b></i></td>
 </tr>
@@ -1031,28 +1031,28 @@ while($educ = $educs->fetch_assoc()){
  ?>
  <tr>
     <td colspan="1" class="s-label left-head" style="text-transform: uppercase;">
-        <span class="count"></span> <?php echo $educ['ed_level'] ?>
+        <span class="count"></span> <?php //echo $educ['ed_level'] ?>
     </td>
-    <td colspan="4"><b><?php echo $educ['name_of_school'] ?></b></td>
-    <td colspan="2"><b><?php echo $educ['educ_degree'] ?></b></td>
+    <td colspan="4"><b><?php //echo $educ['name_of_school'] ?></b></td>
+    <td colspan="2"><b><?php //echo $educ['educ_degree'] ?></b></td>
 
     <td colspan="1"><b><?php $educ['att_from'];
     $dmonth = substr($educ['att_from'], 5, 2); 
     $dday = substr($educ['att_from'], 8, 2);
     $dyear = substr($educ['att_from'], 0, 4);
 
-    echo str_replace("--", "", $totalbd = $dmonth . "-" . $dday . "-" . $dyear);
+    //echo str_replace("--", "", $totalbd = $dmonth . "-" . $dday . "-" . $dyear);
     ?></b></td> 
-    <td colspan="1"><b><?php $educ['att_to'];
+    <td colspan="1" style="color: transparent;"><b><?php $educ['att_to'];
     $dmonth = substr($educ['att_to'] , 5, 2); 
     $dday = substr($educ['att_to'] , 8, 2);
     $dyear = substr($educ['att_to'] , 0, 4);
 
     echo str_replace("--", "", $totalbd = $dmonth . "-" . $dday . "-" . $dyear);
     ?></b></td> 
-    <td colspan="1"><b><?php echo $educ['level_earned'] ?></b></td>
-    <td colspan="1"><b><?php echo $educ['year_grad'] ?></b></td>
-    <td colspan="1"><b><?php echo $educ['scholarship_honors'] ?></b></td>
+    <td colspan="1"><b><?php //echo $educ['level_earned'] ?></b></td>
+    <td colspan="1"><b><?php //echo $educ['year_grad'] ?></b></td>
+    <td colspan="1"><b><?php //echo $educ['scholarship_honors'] ?></b></td>
 </tr>
 <?php } ?>
 <tr>

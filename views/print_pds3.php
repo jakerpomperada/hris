@@ -506,34 +506,97 @@ padding: 2px;
 </style>
 
 <html>
-<head> </head>
+<head>
+    <style type="text/css">
+            table{
+                font-family: Arial Narrow;
+                font-size: 14px !important;
+            }
+            .bot{
+                border-bottom-color: transparent;
+            }
+            .bot-noc{
+                border-bottom-color: transparent;
+                background-color: #EAEAEA !important;
+            }
+            .top{
+                border-top-color: transparent;
+            }
+            .eleven{
+                font-size: 17px;
+            }
+            .nine{
+                font-size: 15px;
+            }
+            .header{
+                font-family: Arial Black;
+                font-size: 28px;
+            }
+            .nopadding{
+                padding: 0;
+            }
+            .col-color{
+                background-color: #969696 !important;
+            }
+            .cat-head{
+                background-color: #969696 !important;
+                color: #FFF;
+                font-style: italic;
+                font-size: 17px !important;
+                font-weight: bold;
+            }
+            .left-head{
+                background-color: #EAEAEA !important;
+            }
+            .text-center{
+                text-align: center;
+            }
+            .text-center{
+                text-align: center;
+            }
+            .cont{
+                background-color: #EAEAEA !important;
+                color: red;
+                font-weight: bold;
+            }
+            .sig{
+                font-size: 17px;
+                font-weight: bold;
+                font-style: italic;
+                padding: 10px;
+                background-color: #EAEAEA !important;
+            }
+            .empty{
+                padding: 4.8px;
+            }
+            .right{
+                border-right-color: transparent;
+            }
+        </style>
+</head>
 <body>
 
 
 <table id="t01" class="centerTable">	
 				
-					
-					<tr>
-                        <td colspan="12" class="separator"></td>
-                    </tr>
                     <tr>
-                        <td colspan="7" class="s-label border-bottom-0">
+                        <td colspan="7" class="s-label border-bottom-0 left-head bot">
                             <span class="count">34.</span> Are you related by consanguinity or affinity to the
                             appointing or recommending authority, or to the<br>
                             <span class="count"></span>chief of bureau or office or to the person who has immediate
                             supervision over you in the Office,<br>
                             <span class="count"></span>Bureau or Department where you will beapppointed,<br>
                         </td>
-                        <td colspan="2">
+                        <td colspan="2" class="bot right">
 
                         </td>
-                        <td colspan="3"></td>
+                        <td colspan="3" class="bot"></td>
                     </tr>
                     <tr>
-                        <td colspan="7" class="s-label">
+                        <td colspan="7" class="s-label bot-noc">
                             <span class="count"></span>a. within the third degree?<br>
                         </td>
-                        <td colspan="2">
+                        <td colspan="2" class="bot right">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="form-group mb-0">
                                     <input type="checkbox" <?php echo $question_34_ay; ?> disabled>
@@ -546,14 +609,14 @@ padding: 2px;
 
                             </div>
                         </td>
-                        <td colspan="3"></td>
+                        <td colspan="3" class="bot"></td>
                     </tr>
                     <tr>
-                        <td colspan="7" class="s-label">
+                        <td colspan="7" class="s-label bot-noc">
                             <span class="count"></span>b. within the fourth degree (for Local Government Unit - Career
                             Employees)?
                         </td>
-                        <td colspan="2">
+                        <td colspan="2" class="bot right">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="form-group mb-0">
                                     <input type="checkbox" <?php echo $question_34_by; ?> disabled>
@@ -566,24 +629,24 @@ padding: 2px;
 
                             </div>
                         </td>
-                        <td colspan="3"></td>
+                        <td colspan="3" class="bot"></td>
                     </tr>
                     <tr>
-                        <td colspan="7" class="s-label">
+                        <td colspan="7" class="s-label bot-noc">
                         </td>
-                        <td colspan="2">If YES, give details:</td>
-                        <td colspan="3"></td>
+                        <td colspan="2" class="bot right">If YES, give details:</td>
+                        <td colspan="3" class="bot"></td>
                     </tr>
                     <tr>
-                        <td colspan="7" class="s-label"></td>
-                        <td colspan="5"><b><?php echo $yes_details_34_b; ?></b></td>
+                        <td colspan="7" class="s-label left-head"></td>
+                        <td colspan="5" class="bot"><b><?php echo $yes_details_34_b; ?></b></td>
                     </tr>
 					<tr>
-                        <td colspan="7" class="s-label border-bottom-0">
+                        <td colspan="7" class="s-label border-bottom-0 bot-noc">
                             <span class="count">35.</span> a. Have you ever been found guilty of any administrative
                             offense?
                         </td>
-                        <td colspan="2">
+                        <td colspan="2" class="bot right">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="form-group mb-0">
                                     <input type="checkbox" <?php echo $question_35_ay; ?> disabled>
@@ -596,22 +659,22 @@ padding: 2px;
 
                             </div>
                         </td>
-                        <td colspan="3"></td>
+                        <td colspan="3" class="bot"></td>
                     </tr>
                     <tr>
-                        <td colspan="7" class="s-label"></td>
-                        <td colspan="5">If YES, give details:</td>
+                        <td colspan="7" class="s-label bot-noc"></td>
+                        <td colspan="5" class="bot">If YES, give details:</td>
                     </tr>
                     <tr>
-                        <td colspan="7" class="s-label"></td>
-                        <td colspan="5"><b><?php echo $yes_details_35_a; ?></b></td>
+                        <td colspan="7" class="s-label bot-noc"></td>
+                        <td colspan="5" class="bot"><b><?php echo $yes_details_35_a; ?></b></td>
                     </tr>
                     <tr>
-                        <td colspan="7" class="s-label">
+                        <td colspan="7" class="s-label bot-noc">
                             <span class="count"></span> b. within the fourth degree (for Local Government Unit - Career
                             Employees)?
                         </td>
-                        <td colspan="2" style="border-top-width: 1px !important;">
+                        <td colspan="2" style="border-top-width: 1px !important;" class="bot right">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="form-group mb-0">
                                     <input type="checkbox" <?php echo $question_35_by; ?> disabled>
@@ -623,16 +686,16 @@ padding: 2px;
                                 </div>
                             </div>
                         </td>
-                        <td colspan="3" style="border-top-width: 1px !important;"></td>
+                        <td colspan="3" class="bot" style="border-top-width: 1px !important;"></td>
                     </tr>
                     <tr>
-                        <td colspan="7" class="s-label"></td>
-                        <td colspan="5">If YES, give details:</td>
+                        <td colspan="7" class="s-label bot-noc"></td>
+                        <td colspan="5" class="bot">If YES, give details:</td>
                     </tr>
                     <tr>
-                        <td colspan="7" class="s-label"></td>
-                        <td colspan="2">Date Filed:</td>
-                        <td colspan="3"><b><?php $question_35_b_datefiled;
+                        <td colspan="7" class="s-label bot-noc"></td>
+                        <td colspan="2" class="bot right">Date Filed:</td>
+                        <td colspan="3" class="bot"><b><?php $question_35_b_datefiled;
                          $dmonth = substr($question_35_b_datefiled, 5, 2); 
                          $dday = substr($question_35_b_datefiled, 8, 2);
                          $dyear = substr($question_35_b_datefiled, 0, 4);
@@ -641,16 +704,16 @@ padding: 2px;
                         ?></b></td> 
                     </tr>
                     <tr>
-                        <td colspan="7" class="s-label"></td>
-                        <td colspan="2">Status of Case/s:</td>
-                        <td colspan="3"><b><?php echo $status_cases_35_b; ?></b></td>
+                        <td colspan="7" class="s-label left-head"></td>
+                        <td colspan="2" class="bot right">Status of Case/s:</td>
+                        <td colspan="3" class="bot"><b><?php echo $status_cases_35_b; ?></b></td>
                     </tr>
 					<tr>
-                        <td colspan="7" class="s-label border-bottom-0">
+                        <td colspan="7" class="s-label border-bottom-0 bot-noc">
                             <span class="count">36.</span> Have you ever been convicted of any crime or violation of any
                             law, decree, ordinance or regulation by any court or tribunal?
                         </td>
-                        <td colspan="2">
+                        <td colspan="2" class="bot right">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="form-group mb-0">
                                     <input type="checkbox" <?php echo $question_36y; ?> disabled>
@@ -662,24 +725,24 @@ padding: 2px;
                                 </div>
                             </div>
                         </td>
-                        <td colspan="3"></td>
+                        <td colspan="3" class="bot"></td>
                     </tr>
                     <tr>
-                        <td colspan="7" class="s-label"></td>
-                        <td colspan="5">If YES, give details:</td>
+                        <td colspan="7" class="s-label bot-noc"></td>
+                        <td colspan="5" class="bot">If YES, give details:</td>
                     </tr>
                     <tr>
-                        <td colspan="7" class="s-label"></td>
-                        <td colspan="5"> <b><?php echo $yes_details_36; ?></b></td>
+                        <td colspan="7" class="s-label left-head"></td>
+                        <td colspan="5" class="bot"> <b><?php echo $yes_details_36; ?></b></td>
                     </tr>
 					<tr>
-                        <td colspan="7" class="s-label border-bottom-0">
+                        <td colspan="7" class="s-label border-bottom-0 bot-noc">
                             <span class="count">37.</span> Have you ever been separated from the service in any of the
                             following modes: resignation,<br>
 
 
                         </td>
-                        <td colspan="2">
+                        <td colspan="2" class="bot right">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="form-group mb-0">
                                     <input type="checkbox" <?php echo $question_37y; ?> disabled>
@@ -691,28 +754,28 @@ padding: 2px;
                                 </div>
                             </div>
                         </td>
-                        <td colspan="3"></td>
+                        <td colspan="3" class="bot"></td>
                     </tr>
 					<tr>
-                        <td colspan="7" class="s-label">
+                        <td colspan="7" class="s-label bot-noc">
                             <span class="count"></span> retirement, dropped from the rolls, dismissal, termination, end
                             of term, finished contract or phased<br>
                         </td>
-                        <td colspan="5">If YES, give details:</td>
+                        <td colspan="5" class="bot">If YES, give details:</td>
                     </tr>
                     <tr>
-                        <td colspan="7" class="s-label">
+                        <td colspan="7" class="s-label left-head">
                             <span class="count"></span> out (abolition) in the public or private sector?
                         </td>
-                        <td colspan="2"><b><?php echo $yes_details_37; ?></b></td>
-                        <td colspan="3"></td>
+                        <td colspan="2" class="bot right"><b><?php echo $yes_details_37; ?></b></td>
+                        <td colspan="3" class="bot"></td>
                     </tr>
 					<tr>
-                        <td colspan="7" class="s-label border-bottom-0">
+                        <td colspan="7" class="s-label border-bottom-0 bot-noc">
                             <span class="count">38.</span> a. Have you ever been a candidate in a national or local
                             election held within the last year (except Barangay election)?
                         </td>
-                        <td colspan="2">
+                        <td colspan="2" class="bot right">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="form-group mb-0">
                                     <input type="checkbox" <?php echo $question_38_ay; ?> disabled>
@@ -724,21 +787,21 @@ padding: 2px;
                                 </div>
                             </div>
                         </td>
-                        <td colspan="3"></td>
+                        <td colspan="3" class="bot"></td>
                     </tr>
                     <tr>
-                        <td colspan="7" class="s-label">
+                        <td colspan="7" class="s-label bot-noc">
                             <span class="count"></span><br>
                         </td>
-                        <td colspan="2">If YES, give details:</td>
-                        <td colspan="3"><b><?php echo $yes_details_38_a; ?></b></td>
+                        <td colspan="2" class="bot right">If YES, give details:</td>
+                        <td colspan="3" class="bot"><b><?php echo $yes_details_38_a; ?></b></td>
                     </tr>
                     <tr>
-                        <td colspan="7" class="s-label">
+                        <td colspan="7" class="s-label bot-noc">
                             <span class="count"></span> b. Have you resigned from the government service during the
                             three (3)-month period before the last
                         </td>
-                        <td colspan="2">
+                        <td colspan="2" class="bot right">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="form-group mb-0">
                                     <input type="checkbox" <?php echo $question_38_by; ?> disabled>
@@ -750,27 +813,27 @@ padding: 2px;
                                 </div>
                             </div>
                         </td>
-                        <td colspan="3"></td>
+                        <td colspan="3" class="bot"></td>
                     </tr>
                     <tr>
-                        <td colspan="7" class="s-label">
+                        <td colspan="7" class="s-label bot-noc">
                             <span class="count"></span> election to promote/actively campaign for a national or local
                             candidate?
                         </td>
-                        <td colspan="2">If YES, give details:</td>
-                        <td colspan="3"></td>
+                        <td colspan="2" class="bot right">If YES, give details:</td>
+                        <td colspan="3" class="bot"></td>
                     </tr>
                     <tr>
-                        <td colspan="7" class="s-label"></td>
-                        <td colspan="2"><b><?php echo $yes_details_38_b; ?></b></td>
-                        <td colspan="3"></td>
+                        <td colspan="7" class="s-label left-head"></td>
+                        <td colspan="2" class="bot right"><b><?php echo $yes_details_38_b; ?></b></td>
+                        <td colspan="3" class="bot"></td>
                     </tr>
 					 <tr>
-                        <td colspan="7" class="s-label border-bottom-0">
+                        <td colspan="7" class="s-label border-bottom-0 bot-noc">
                             <span class="count">39.</span> Have you acquired the status of an immigrant or permanent
                             resident of another country?
                         </td>
-                        <td colspan="2">
+                        <td colspan="2" class="bot right">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="form-group mb-0">
                                     <input type="checkbox" <?php echo $question_39y; ?> disabled>
@@ -782,37 +845,37 @@ padding: 2px;
                                 </div>
                             </div>
                         </td>
-                        <td colspan="3"></td>
+                        <td colspan="3" class="bot"></td>
                     </tr>
                     <tr>
-                        <td colspan="7" class="s-label">
+                        <td colspan="7" class="s-label bot-noc">
                         </td>
-                        <td colspan="2">if YES, give details (country):</td>
-                        <td colspan="3"></td>
+                        <td colspan="2" class="bot right">if YES, give details (country):</td>
+                        <td colspan="3" class="bot"></td>
                     </tr>
                     <tr>
-                        <td colspan="7" class="s-label">
+                        <td colspan="7" class="s-label left-head">
                         </td>
-                        <td colspan="2"><b><?php echo $yes_details_39; ?></b></td>
-                        <td colspan="3"></td>
+                        <td colspan="2" class="bot right"><b><?php echo $yes_details_39; ?></b></td>
+                        <td colspan="3" class="bot"></td>
                     </tr>
 					<tr>
-                        <td colspan="7" class="s-label border-bottom-0">
+                        <td colspan="7" class="s-label border-bottom-0 bot-noc">
                             <span class="count">40.</span> Pursuant to: (a) Indigenous People's Act (RA 8371); (b) Magna
                             Carta for Disabled Persons (RA<br>
                             <span class="count"></span> 7277); and (c) Solo Parents Welfare Act of 2000 (RA 8972),
                             please answer the following items:
                         </td>
-                        <td colspan="2">
+                        <td colspan="2" class="bot right">
 
                         </td>
-                        <td colspan="3"></td>
+                        <td colspan="3" class="bot"></td>
                     </tr>
                     <tr>
-                        <td colspan="7" class="s-label">
+                        <td colspan="7" class="s-label bot-noc">
                             <span class="count"></span>a. Are you a member of any indigenous group?<br>
                         </td>
-                        <td colspan="2">
+                        <td colspan="2" class="bot right">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="form-group mb-0">
                                     <input type="checkbox" <?php echo $question_40_ay; ?> disabled>
@@ -824,20 +887,20 @@ padding: 2px;
                                 </div>
                             </div>
                         </td>
-                        <td colspan="3"></td>
+                        <td colspan="3" class="bot"></td>
                     </tr>
                     <tr>
-                        <td colspan="7" class="s-label">
+                        <td colspan="7" class="s-label bot-noc">
                             <span class="count"></span><br>
                         </td>
-                        <td colspan="2">If YES, please specify:</td>
-                        <td colspan="3"><b><?php echo $a_yes_details_40; ?></b></td>
+                        <td colspan="2" class="bot right">If YES, please specify:</td>
+                        <td colspan="3" class="bot"><b><?php echo $a_yes_details_40; ?></b></td>
                     </tr>
                     <tr>
-                        <td colspan="7" class="s-label">
+                        <td colspan="7" class="s-label bot-noc">
                             <span class="count"></span>b. Are you a person with disability?
                         </td>
-                        <td colspan="2">
+                        <td colspan="2" class="bot right">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="form-group mb-0">
                                     <input type="checkbox" <?php echo $question_40_by; ?> disabled>
@@ -849,19 +912,19 @@ padding: 2px;
                                 </div>
                             </div>
                         </td>
-                        <td colspan="3"></td>
+                        <td colspan="3" class="bot"></td>
                     </tr>
                     <tr>
-                        <td colspan="7" class="s-label">
+                        <td colspan="7" class="s-label  bot-noc">
                         </td>
-                        <td colspan="2">If YES, please specify:</td>
-                        <td colspan="3"><b><?php echo $b_yes_details_b; ?></b></td>
+                        <td colspan="2" class="bot right">If YES, please specify:</td>
+                        <td colspan="3" class="bot"><b><?php echo $b_yes_details_b; ?></b></td>
                     </tr>
                     <tr>
-                        <td colspan="7" class="s-label">
+                        <td colspan="7" class="s-label  bot-noc">
                             <span class="count"></span>c. Are you a solo parent?
                         </td>
-                        <td colspan="2">
+                        <td colspan="2" class="bot right">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="form-group mb-0">
                                     <input type="checkbox" <?php echo $question_40_cy; ?> disabled>
@@ -873,16 +936,16 @@ padding: 2px;
                                 </div>
                             </div>
                         </td>
-                        <td colspan="3"></td>
+                        <td colspan="3" class="bot"></td>
                     </tr>
                     <tr>
-                        <td colspan="7" class="s-label"></td>
-                        <td colspan="2">If YES, please specify:</td>
-                        <td colspan="3"><b><?php echo $c_yes_details_c; ?></b></td>
+                        <td colspan="7" class="s-label left-head"></td>
+                        <td colspan="2" class="bot right">If YES, please specify:</td>
+                        <td colspan="3" class="bot"><b><?php echo $c_yes_details_c; ?></b></td>
                     </tr>
 					<tr>
-                        <td colspan="9" class="s-label">
-                            <span class="count">41.</span> REFERENCES <span class="text-danger">(Person not related by
+                        <td colspan="9" class="s-label left-head">
+                            <span class="count">41.</span> REFERENCES <span style="color: red; font-size: 12px; font-style: italic;">(Person not related by
                                 consanguinity or affinity to applicant /appointee)</span>
                         </td>
                         <td colspan="4" rowspan="6">
@@ -902,9 +965,9 @@ padding: 2px;
                         </td>
                     </tr>
                     <tr class="text-center">
-                        <td colspan="4" class="s-label">NAME</td>
-                        <td colspan="3" class="s-label">ADDRESS</td>
-                        <td colspan="2" class="s-label">TEL. NO.</td>
+                        <td colspan="4" class="s-label left-head">NAME</td>
+                        <td colspan="3" class="s-label left-head">ADDRESS</td>
+                        <td colspan="2" class="s-label left-head">TEL. NO.</td>
                     </tr>
 					<?php 
 						require('db_config.php');
@@ -940,7 +1003,7 @@ padding: 2px;
 					
 					
 					<tr>
-                        <td colspan="8">
+                        <td colspan="8" class=" left-head">
                             <span class="count">42.</span> I declare under oath that I have personally accomplished this
                             Personal Data Sheet which is a true correct and<br><span class="count"></span> complete
                             statement pursuant to the provisions of pertinent laws, rules and regulations of the
@@ -962,7 +1025,7 @@ padding: 2px;
                                             <table class="border-0 w-100">
                                                 <tbody>
                                                     <tr>
-                                                        <td>Government Issued ID(i.e.Passport,
+                                                        <td class=" left-head">Government Issued ID(i.e.Passport,
                                                             GSIS, SSS, PRC, Driver's License, etc.)<br> PLEASE INDICATE
                                                             ID Number and Date of Issuance</td>
                                                     </tr>
@@ -986,13 +1049,13 @@ padding: 2px;
 											<div style="border-style: solid; border-width:1px; width:290px; height: 50px;"> 
 											&nbsp;
 											</div>
-											<div style="border-style: solid; border-width:1px; width:290px; height: 20px;"> 
+											<div style="border-style: solid; border-width:1px; width:290px; height: 20px;" class=" left-head"> 
 											Signature (Sign inside the box)
 											</div>
 											<div style="border-style: solid; border-width:1px; width:290px; height: 30px;"> 
 											&nbsp;
 											</div>
-											<div style="border-style: solid; border-width:1px; width:290px; height: 20px;"> 
+											<div style="border-style: solid; border-width:1px; width:290px; height: 20px;" class=" left-head"> 
 											Date Accomplished
 											</div>
 										
@@ -1003,7 +1066,7 @@ padding: 2px;
 											<div style="border-style: solid; border-width:1px; width:150px; height: 85px;"> 
 											&nbsp;
 											</div>
-											<div style="border-style: solid; border-width:1px; width:150px; height: 20px;"> 
+											<div style="border-style: solid; border-width:1px; width:150px; height: 20px;" class=" left-head"> 
 											Right Thumbmark
 											</div>
 										</centeR>
@@ -1027,7 +1090,7 @@ padding: 2px;
 											<div style="border-style: solid; border-width:1px; width:450px; height: 70px;"> 
 											&nbsp;
 											</div>
-											<div style="border-style: solid; border-width:1px; width:450px; height: 20px;"> 
+											<div style="border-style: solid; border-width:1px; width:450px; height: 20px;" class=" left-head"> 
 											Person Administering Oath
 											</div>
 										</centeR>

@@ -6,8 +6,13 @@ error_reporting(0);
 	$username = "root";
 	$password = "";
     $dbname = "hris";
-    
+
     $db = new mysqli($servername, $username, $password, $dbname);
+
+    $nav = array("print_pds0.php");
+
+    mysqli_query($db, "SELECT * FROM tbl_children WHERE employee_id=\"$id\" LIMIT 0,1");
+    
     
 	if (isset($_GET['print'])) {
 	    $id = $_GET['print'];

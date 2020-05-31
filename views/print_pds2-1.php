@@ -592,7 +592,7 @@ padding: 2px;
 						require('db_config.php');
 						$id = $_GET['print'];
 						
-						$sql = "SELECT * FROM tbl_voluntary_work WHERE employee_id=\"$id\"  ORDER BY voluntary_work_id LIMIT 0, 7";
+						$sql = "SELECT * FROM tbl_voluntary_work WHERE employee_id=\"$id\"  ORDER BY voluntary_work_id LIMIT 7, 7";
 						$vols = $mysqli->query($sql);
 						
 						$num_rows_vols2 = mysqli_num_rows($vols);
@@ -669,7 +669,7 @@ padding: 2px;
 					require('db_config.php');
 					$id = $_GET['print'];
 					
-					$sql = "SELECT * FROM tbl_training WHERE employee_id=\"$id\"  ORDER BY training_id LIMIT 0, 21";
+					$sql = "SELECT * FROM tbl_training WHERE employee_id=\"$id\"  ORDER BY training_id LIMIT 21, 21";
 					$trains = $mysqli->query($sql);
 					
 					$num_rows_trains2 = mysqli_num_rows($trains);

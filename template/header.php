@@ -49,7 +49,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo BASE_URL; ?>./views/record.php">Records</a>
                     </li>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown" hidden>
 
                         <a class="nav-link dropdown-toggle d-flex align-items-center" href="#"
                             id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
@@ -73,7 +73,7 @@
                                 Over</a>
                           </div>
                     </li>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown" hidden>
 
                         <a class="nav-link dropdown-toggle d-flex align-items-center" href="#"
                             id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"

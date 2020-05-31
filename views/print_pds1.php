@@ -506,40 +506,96 @@ padding: 2px;
 </style>
 
 <html>
-<head> </head>
+<head>
+    <style type="text/css">
+            table{
+                font-family: Arial Narrow;
+                font-size: 14px !important;
+            }
+            .bot{
+                border-bottom-color: transparent;
+            }
+            .top{
+                border-top-color: transparent;
+            }
+            .eleven{
+                font-size: 17px;
+            }
+            .nine{
+                font-size: 15px;
+            }
+            .header{
+                font-family: Arial Black;
+                font-size: 28px;
+            }
+            .nopadding{
+                padding: 0;
+            }
+            .col-color{
+                background-color: #969696 !important;
+            }
+            .cat-head{
+                background-color: #969696 !important;
+                color: #FFF;
+                font-style: italic;
+                font-size: 17px !important;
+                font-weight: bold;
+            }
+            .left-head{
+                background-color: #EAEAEA !important;
+            }
+            .text-center{
+                text-align: center;
+            }
+            .text-center{
+                text-align: center;
+            }
+            .cont{
+                background-color: #EAEAEA !important;
+                color: red;
+                font-weight: bold;
+            }
+            .sig{
+                font-size: 17px;
+                font-weight: bold;
+                font-style: italic;
+                padding: 10px;
+                background-color: #EAEAEA !important;
+            }
+            .empty{
+                padding: 4.8px;
+            }
+        </style>
+</head>
 <body>
 
 <table id="t01" class="centerTable">
 					
 					
 					<tr>
-                        <td colspan="12" class="text-white separator">IV. CIVIL SERVICE ELIGIBILITY</td>
+                        <td colspan="12" class="text-white separator cat-head">IV. CIVIL SERVICE ELIGIBILITY</td>
                     </tr>
                     <tr class="text-center">
-                        <td colspan="5" class="s-label border-bottom-0" style="width:30%">
+                        <td colspan="5" rowspan="2" class="s-label border-bottom-0 left-head" style="width:30%">
                             <span class="count float-left">27.</span>
                             CAREER SERVICE/ RA 1080 (BOARD/ BAR) UNDER SPECIAL LAWS/ CES/ CSEE
                             BARANGAY ELIGIBILITY / DRIVER'S LICENSE
                         </td>
-                        <td colspan="1" class="s-label border-bottom-0">RATING<br>(If Applicable)</td>
-                        <td colspan="2" class="s-label border-bottom-0">DATE OF EXAMINATION / CONFERMENT</td>
-                        <td colspan="2" class="s-label border-bottom-0">PLACE OF EXAMINATION / CONFERMENT</td>
-                        <td colspan="2" class="s-label border-bottom-0">LICENSE<br>(if applicable)</td>
+                        <td colspan="1" rowspan="2" class="s-label border-bottom-0 left-head left-head">RATING<br>(If Applicable)</td>
+                        <td colspan="1" rowspan="2" class="s-label border-bottom-0 left-head">DATE OF EXAMINATION / CONFERMENT</td>
+                        <td colspan="3" rowspan="2" class="s-label border-bottom-0 left-head">PLACE OF EXAMINATION / CONFERMENT</td>
+                        <td colspan="2" class="s-label border-bottom-0 left-head">LICENSE<br>(if applicable)</td>
                     </tr>
                     <tr class="text-center">
-                        <td colspan="5" class="s-label border-top-0"></td>
-                        <td colspan="1" class="s-label border-top-0"></td>
-                        <td colspan="2" class="s-label border-top-0"></td>
-                        <td colspan="2" class="s-label border-top-0"></td>
-                        <td colspan="1" class="s-label">NUMBER</td>
-                        <td colspan="1" class="s-label">Date of Validity</td>
+                        <td colspan="1" class="s-label left-head">NUMBER</td>
+                        <td colspan="1" class="s-label left-head">Date of Validity</td>
                     </tr>
 					
 					<?php 
 						require('db_config.php');
 						$id = $_GET['print'];
 						
-						$sql = "SELECT * FROM tbl_eligibility WHERE employee_id=\"$id\"  ORDER BY civil_service_id";
+						$sql = "SELECT * FROM tbl_eligibility WHERE employee_id=\"$id\"  ORDER BY civil_service_id LIMIT 0, 7";
 						$eligs = $mysqli->query($sql);
 						
 						$num_rows_eligs = mysqli_num_rows($eligs);
@@ -572,85 +628,71 @@ padding: 2px;
 					for( $num_rows_eligs>=0; $num_rows_eligs <=6; $num_rows_eligs++ ){
 					?>
 					<tr>
-                        <td colspan="5"><b>&nbsp;</b></td>
-                        <td colspan="1"><b>&nbsp;</b></td>
-                        <td colspan="2"><b>&nbsp;</b></td>
-                        <td colspan="2"><b>&nbsp;</b></td>
-                        <td colspan="1"><b>&nbsp;</b></td>
-                        <td colspan="1"><b>&nbsp;</b></td>
+                        <td colspan="5" class="empty"><b>&nbsp;</b></td>
+                        <td colspan="1" class="empty"><b>&nbsp;</b></td>
+                        <td colspan="2" class="empty"><b>&nbsp;</b></td>
+                        <td colspan="2" class="empty"><b>&nbsp;</b></td>
+                        <td colspan="1" class="empty"><b>&nbsp;</b></td>
+                        <td colspan="1" class="empty"><b>&nbsp;</b></td>
                     </tr>
 					<?php  } ?> 
 					<tr>
-                        <td colspan="12" class="text-white separator bg-transparent text-danger text-center">
+                        <td colspan="12" class="text-white separator bg-transparent text-danger text-center cont">
                             <i>(Continue on seperate sheet if necessary)</i>
                         </td>
                     </tr>
 					<tr>
-                        <td colspan="12" class="text-white separator">
+                        <td colspan="12" class="text-white separator cat-head">
                             V. WORK EXPERIENCE<br>
                             <small><i>(Include private employment. Start from your recent work) Description of duties
                                     should be indicated in the attached Work Experience sheet.</i></small>
                         </td>
                     </tr>
 					<tr>
-                        <td colspan="1" class="s-label border-bottom-0" style="width: 20%;">
+                        <td colspan="2" class="s-label border-bottom-0 left-head text-center" style="width: 20%;">
                             <span class="count float-left">28.</span>
                             INCLUSIVE DATES<br>(mm/dd/yyyy)
 
 						</td>
-						<td colspan="2" class="s-label border-bottom-0">
+						<td colspan="4" class="s-label border-bottom-0 left-head text-center" rowspan="2">
                             POSITION TITLE<br>
                             Write in full/Do not abbreviate)
                         </td>
-						<td colspan="5"> 
+						<td colspan="2" class=" left-head text-center" rowspan="2"> 
 						DEPARTMENT  / AGENCY / OFFICE / COMPANY <Br>
 						(Write in full/Do not abbreviate)
 						</td>
-						<td colspan="1" class="s-label border-bottom-0">MONTHLY<br>SALARY</td>
-                        <td colspan="1" class="s-label border-bottom-0"><small>SALARY/ JOB/ PAY<br>GRADE (if
+						<td colspan="1" class="s-label border-bottom-0 left-head text-center" rowspan="2">MONTHLY<br>SALARY</td>
+                        <td colspan="1" class="s-label border-bottom-0 left-head" rowspan="2"><small>SALARY/ JOB/ PAY<br>GRADE (if
                                 applicable)& STEP (Format "00-0")/ INCREMENT</small></td>
-                        <td colspan="1" class="s-label border-bottom-0">STATUS OF<br>APPOINTMENT</td>
-                        <td colspan="1" class="s-label border-bottom-0">GOV'T SERVICE<br>
+                        <td colspan="1" class="s-label border-bottom-0 left-head text-center" rowspan="2">STATUS OF<br>APPOINTMENT</td>
+                        <td colspan="1" class="s-label border-bottom-0 left-head text-center" rowspan="2">GOV'T SERVICE<br>
                             <small>(Y/ N)</small></td>
 						
 					</tr>
 					<tr>
-                        <td colspan="1" class="p-0">
-						    <table id="working_experience" style="width:100%;">
-                                
-                                    <tr class="text-center">
-                                        <td style="width: 50%;" align="center">From</td>
-                                        <td style="width: 50%;" align="center">To</td>
-                                    </tr>
-                               
-                            </table>
+                        <td colspan="1" width="10%" class="text-center left-head">
+                          From  
                         </td>
-                        <td colspan="5" class="s-label border-top-0"></td>
-                        <td colspan="2" class="s-label border-top-0"></td>
-                        <td colspan="1" class="s-label border-top-0"></td>
-                        <td colspan="1" class="s-label border-top-0"></td>
-                        <td colspan="1" class="s-label border-top-0"></td>
-                        <td colspan="1" class="s-label border-top-0"></td>
+                        <td colspan="1" width="10%"  class="text-center left-head">
+                          Until
+                        </td>
                     </tr>
 					<?php 
 					require('db_config.php');
 					$id = $_GET['print'];
 					
-					$sql = "SELECT * FROM tbl_work_experience WHERE employee_id=\"$id\"  ORDER BY work_experience_id";
+					$sql = "SELECT * FROM tbl_work_experience WHERE employee_id=\"$id\"  ORDER BY work_experience_id LIMIT 0, 28";
 					$works = $mysqli->query($sql);
 					
-					$num_rows_works = mysqli_num_rows($works);
+					$num_rows_works2 = mysqli_num_rows($works);
 					
 					
 					while($work = $works->fetch_assoc()){
 					?>
 					<tr>
-                        <td colspan="1" class="p-0">
-						
-							<table id="working_experience" style="width:100%;">
-                                
-                                    <tr class="text-center">
-                                <td style="width: 50%;"><b><?php  $work['work_from'];
+                        <td colspan="1" width="10%" class="text-center">
+                        <b><?php  $work['work_from'];
                                  $dmonth = substr($work['work_from'], 5, 2); 
                                  $dday = substr($work['work_from'], 8, 2);
                                  $dyear = substr($work['work_from'], 0, 4);
@@ -658,20 +700,14 @@ padding: 2px;
                                 echo $totalbd = $dmonth . "-" . $dday . "-" . $dyear;
                         ?></b></td> 
                                         
-                            <td style="width: 50%;"><b><?php  $work['work_to'];
+                            <td colspan="1" width="10%"  class="text-center"><b><?php  $work['work_to'];
                                  $dmonth = substr($work['work_from'], 5, 2); 
                                  $dday = substr($work['work_from'], 8, 2);
                                  $dyear = substr($work['work_from'], 0, 4);
 
                                 echo $totalbd = $dmonth . "-" . $dday . "-" . $dyear;
                         ?></b></td> 
-                                    </tr>
-                               
-                            </table>
-						
-                      
-                        </td>
-                        <td colspan="5"><b><?php echo $work['position_title'] ?></b></td>
+                        <td colspan="4"><b><?php echo $work['position_title'] ?></b></td>
                         <td colspan="2"><b><?php echo $work['department_agency'] ?></b></td>
                         <td colspan="1"><b><?php echo $work['monthly_salary'] ?></b></td>
                         <td colspan="1"><b><?php echo $work['salary_job_step'] ?></b></td>
@@ -680,7 +716,7 @@ padding: 2px;
                     </tr>
                     <?php } ?>
 					<?php 
-					for( $num_rows_works>=0; $num_rows_works <=38; $num_rows_works++ ){
+					for( $num_rows_works>=0; $num_rows_works < (28 - $num_rows_works2); $num_rows_works++ ){
 					?>
 					<tr>
 <style>					
@@ -695,33 +731,27 @@ border: 0px solid black;
 border-collapse: collapse;
 }
 </style>
-                        <td colspan="1" class="p-0">
-                             <table id="working_experience" style="width:100%;">
-                                
-                                    <tr class="text-center">
-                                        <td style="width: 50%;">&nbsp;</td>
-                                        <td style="width: 50%;">&nbsp;</td>
-                                    </tr>
-                               
-                            </table>
+                        <td colspan="1" width="10%" class="text-center empty">
                         </td>
-                        <td colspan="5"><b>&nbsp;</b></td>
-                        <td colspan="2"><b>&nbsp;</b></td>
-                        <td colspan="1"><b>&nbsp;</b></td>
-                        <td colspan="1"><b>&nbsp;</b></td>
-                        <td colspan="1"><b>&nbsp;</b></td>
-                        <td colspan="1"><b>&nbsp;</b></td>
+                        <td colspan="1" width="10%"  class="text-center empty">
+                        </td>
+                        <td colspan="4" class="empty"><b>&nbsp;</b></td>
+                        <td colspan="2" class="empty"><b>&nbsp;</b></td>
+                        <td colspan="1" class="empty"><b>&nbsp;</b></td>
+                        <td colspan="1" class="empty"><b>&nbsp;</b></td>
+                        <td colspan="1" class="empty"><b>&nbsp;</b></td>
+                        <td colspan="1" class="empty"><b>&nbsp;</b></td>
                     </tr>
 					<?php  } ?> 
 					<tr>
-                        <td colspan="12" class="text-white separator bg-transparent text-danger text-center">
+                        <td colspan="12" class="text-white separator bg-transparent text-danger text-center cont">
                             <i>(Continue on seperate sheet if necessary)</i>
                         </td>
                     </tr>
 					<tr>
-                        <td colspan="1" class="text-center"><i><b>SIGNATURE</b></i></td>
-                        <td colspan="6"></td>
-                        <td colspan="2" class="text-center"><i><b>DATE</b></i></td>
+                        <td colspan="2" class="text-center sig"><i><b>SIGNATURE</b></i></td>
+                        <td colspan="5"></td>
+                        <td colspan="2" class="text-center sig"><i><b>DATE</b></i></td>
                         <td colspan="3"></td>
                     </tr>
 					<!-- End of Page 2 -->
