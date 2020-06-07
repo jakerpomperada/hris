@@ -642,10 +642,10 @@ padding: 2px;
                     </tr>
 					<tr>
                         <td colspan="12" class="text-white separator cat-head">VII. LEARNING AND DEVELOPMENT (L&D)
-                            INTERVENTIONS/TRAINING PROGRAMS ATTENDED<!--<br>
+                            INTERVENTIONS/TRAINING PROGRAMS ATTENDED<br>
                             <small><i>(Start from the most recent L&D/training program and include only the relevant
                                     L&D/training taken for the last five (5) years for Division
-                                    Chief/Executive/Managerial positions)</i></small> -->
+                                    Chief/Executive/Managerial positions)</i></small>
                         </td>
                     </tr>
 					<tr class="text-center">

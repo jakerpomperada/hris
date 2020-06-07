@@ -606,7 +606,7 @@ padding: 2px;
                     <tr>
                         <td colspan="5"><b><?php echo $elig['descriptionx'] ?></b></td>
                         <td colspan="1"><b><?php echo $elig['rating'] ?></b></td>
-                        <td colspan="2"><b><?php $elig['date_exam'];
+                        <td colspan="2" class="text-center"><b><?php $elig['date_exam'];
                          $dmonth = substr($elig['date_exam'], 5, 2); 
                          $dday = substr($elig['date_exam'], 8, 2);
                          $dyear = substr($elig['date_exam'], 0, 4);
@@ -712,7 +712,7 @@ padding: 2px;
                         <td colspan="1"><b><?php echo $work['monthly_salary'] ?></b></td>
                         <td colspan="1"><b><?php echo $work['salary_job_step'] ?></b></td>
                         <td colspan="1"><b><?php echo $work['status_appointment'] ?></b></td>
-                        <td colspan="1"><b><?php echo $work['government_service_y_n'] ?></b></td>
+                        <td colspan="1" class="text-center"><b><?php echo $work['government_service_y_n'] ?></b></td>
                     </tr>
                     <?php } ?>
 					<?php 
