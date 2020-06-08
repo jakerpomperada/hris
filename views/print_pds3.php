@@ -572,6 +572,12 @@ padding: 2px;
             .right{
                 border-right-color: transparent;
             }
+            .underline{
+                text-decoration: underline;
+            }
+            .d-flex{
+                display: flex !important;
+            }
         </style>
 </head>
 <body>
@@ -639,7 +645,7 @@ padding: 2px;
                     </tr>
                     <tr>
                         <td colspan="7" class="s-label left-head"></td>
-                        <td colspan="5" class="bot"><b><?php echo $yes_details_34_b; ?></b></td>
+                        <td colspan="5" class="bot underline"><b><?php echo $yes_details_34_b; ?></b></td>
                     </tr>
 					<tr>
                         <td colspan="7" class="s-label border-bottom-0 bot-noc">
@@ -667,7 +673,7 @@ padding: 2px;
                     </tr>
                     <tr>
                         <td colspan="7" class="s-label bot-noc"></td>
-                        <td colspan="5" class="bot"><b><?php echo $yes_details_35_a; ?></b></td>
+                        <td colspan="5" class="bot underline"><b><?php echo $yes_details_35_a; ?></b></td>
                     </tr>
                     <tr>
                         <td colspan="7" class="s-label bot-noc">
@@ -690,12 +696,12 @@ padding: 2px;
                     </tr>
                     <tr>
                         <td colspan="7" class="s-label bot-noc"></td>
-                        <td colspan="5" class="bot">If YES, give details:</td>
+                        <td colspan="5" class="bot underline">If YES, give details:</td>
                     </tr>
                     <tr>
                         <td colspan="7" class="s-label bot-noc"></td>
                         <td colspan="2" class="bot right">Date Filed:</td>
-                        <td colspan="3" class="bot"><b><?php $question_35_b_datefiled;
+                        <td colspan="3" class="bot underline"><b><?php $question_35_b_datefiled;
                          $dmonth = substr($question_35_b_datefiled, 5, 2); 
                          $dday = substr($question_35_b_datefiled, 8, 2);
                          $dyear = substr($question_35_b_datefiled, 0, 4);
@@ -706,7 +712,7 @@ padding: 2px;
                     <tr>
                         <td colspan="7" class="s-label left-head"></td>
                         <td colspan="2" class="bot right">Status of Case/s:</td>
-                        <td colspan="3" class="bot"><b><?php echo $status_cases_35_b; ?></b></td>
+                        <td colspan="3" class="bot underline"><b><?php echo $status_cases_35_b; ?></b></td>
                     </tr>
 					<tr>
                         <td colspan="7" class="s-label border-bottom-0 bot-noc">
@@ -733,7 +739,7 @@ padding: 2px;
                     </tr>
                     <tr>
                         <td colspan="7" class="s-label left-head"></td>
-                        <td colspan="5" class="bot"> <b><?php echo $yes_details_36; ?></b></td>
+                        <td colspan="5" class="bot underline"> <b><?php echo $yes_details_36; ?></b></td>
                     </tr>
 					<tr>
                         <td colspan="7" class="s-label border-bottom-0 bot-noc">
@@ -767,7 +773,7 @@ padding: 2px;
                         <td colspan="7" class="s-label left-head">
                             <span class="count"></span> out (abolition) in the public or private sector?
                         </td>
-                        <td colspan="2" class="bot right"><b><?php echo $yes_details_37; ?></b></td>
+                        <td colspan="2" class="bot right underline"><b><?php echo $yes_details_37; ?></b></td>
                         <td colspan="3" class="bot"></td>
                     </tr>
 					<tr>
@@ -794,7 +800,7 @@ padding: 2px;
                             <span class="count"></span><br>
                         </td>
                         <td colspan="2" class="bot right">If YES, give details:</td>
-                        <td colspan="3" class="bot"><b><?php echo $yes_details_38_a; ?></b></td>
+                        <td colspan="3" class="bot underline"><b><?php echo $yes_details_38_a; ?></b></td>
                     </tr>
                     <tr>
                         <td colspan="7" class="s-label bot-noc">
@@ -825,7 +831,7 @@ padding: 2px;
                     </tr>
                     <tr>
                         <td colspan="7" class="s-label left-head"></td>
-                        <td colspan="2" class="bot right"><b><?php echo $yes_details_38_b; ?></b></td>
+                        <td colspan="2" class="bot right underline"><b><?php echo $yes_details_38_b; ?></b></td>
                         <td colspan="3" class="bot"></td>
                     </tr>
 					 <tr>
@@ -856,7 +862,7 @@ padding: 2px;
                     <tr>
                         <td colspan="7" class="s-label left-head">
                         </td>
-                        <td colspan="2" class="bot right"><b><?php echo $yes_details_39; ?></b></td>
+                        <td colspan="2" class="bot right underline"><b><?php echo $yes_details_39; ?></b></td>
                         <td colspan="3" class="bot"></td>
                     </tr>
 					<tr>
@@ -894,7 +900,7 @@ padding: 2px;
                             <span class="count"></span><br>
                         </td>
                         <td colspan="2" class="bot right">If YES, please specify:</td>
-                        <td colspan="3" class="bot"><b><?php echo $a_yes_details_40; ?></b></td>
+                        <td colspan="3" class="bot underline"><b><?php echo $a_yes_details_40; ?></b></td>
                     </tr>
                     <tr>
                         <td colspan="7" class="s-label bot-noc">
@@ -918,7 +924,7 @@ padding: 2px;
                         <td colspan="7" class="s-label  bot-noc">
                         </td>
                         <td colspan="2" class="bot right">If YES, please specify:</td>
-                        <td colspan="3" class="bot"><b><?php echo $b_yes_details_b; ?></b></td>
+                        <td colspan="3" class="bot underline"><b><?php echo $b_yes_details_b; ?></b></td>
                     </tr>
                     <tr>
                         <td colspan="7" class="s-label  bot-noc">
@@ -941,7 +947,7 @@ padding: 2px;
                     <tr>
                         <td colspan="7" class="s-label left-head"></td>
                         <td colspan="2" class="bot right">If YES, please specify:</td>
-                        <td colspan="3" class="bot"><b><?php echo $c_yes_details_c; ?></b></td>
+                        <td colspan="3" class="bot underline"><b><?php echo $c_yes_details_c; ?></b></td>
                     </tr>
 					<tr>
                         <td colspan="9" class="s-label left-head">
@@ -950,14 +956,14 @@ padding: 2px;
                         </td>
                         <td colspan="4" rowspan="6">
                           
-											<div style="border-style: solid; border-width:1px; width:150px; height: 185;">
-												<centeR>
+											<div style="border-style: solid; border-width:3.5px; width:150px; height: 185px; font-size: 10px; align-items: center;">
+												<center style="margin-top: 40px">
 												ID picture taken within the last 6 months3.5 cm. X
 												4.5 cm(passport size) 
 												<br><br> With full and handwrittenname tag and signature
 												overprinted name
 												<br><br> Computer generated or photocopied picture is not acceptable
-												</centeR>
+												</center>
 											</div> <Br>
 											<centeR>
 											PHOTO </center>
