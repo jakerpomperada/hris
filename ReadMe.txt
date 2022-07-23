@@ -1,4 +1,4 @@
-Good Day Sir Jake!
+Good Day 
 To suppress errors, please modify php.ini located at:
 C:/xampp/php/php.ini
 
@@ -11,4 +11,3 @@ display_errors = Off
 Lastly, open XAMPP Control Panel Again and Restart Apache.
 That's All! Good Luck and God Bless!
 
--Adrian
